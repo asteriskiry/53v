@@ -1,0 +1,187 @@
+<script>
+    import { enhance } from '$app/forms';
+    import { page } from '$app/stores';
+    export let invited = false;
+
+    let fi = true;
+    let is_greeting = 'yes';
+
+</script>
+<section>
+<div class="wrap">
+    <div class="flex-items">
+        <form method="POST" action="?/{invited ? 'invited' : 'guest'}" use:enhance>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Etunimi' : 'First name'}</span>
+                    <input type="text" name="first_name" required>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Sukunimi' : 'Last name'}</span>
+                    <input type="text" name="last_name" required>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Sähköposti' : 'Email'}</span>
+                    <input type="email" name="email" required>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <span>{fi ? 'Asteriskin jäsen' : 'Asteriski member'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="is_asteriski_member" value="yes" required checked>
+                        <span>{fi ? 'Kyllä' : 'Yes'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="is_asteriski_member" value="no">
+                        <span>{fi ? 'Ei' : 'No'}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex-item six">
+                <span>{fi ? 'Juoma' : 'Drink'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="is_alcohol_free" value="no" required checked>
+                        <span>{fi ? 'Alkoholillinen' : 'Alcohol'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="is_alcohol_free" value="yes">
+                        <span>{fi ? 'Alkoholiton' : 'Alcohol free'}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex-item six">
+                <span>{fi ? 'Menu' : 'Menu'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="menu" value="LI" required checked>
+                        <span>{fi ? 'Liha' : 'Meat'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="menu" value="VG">
+                        <span>{fi ? 'Vegaani' : 'Vegan'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="menu" value="KA">
+                        <span>{fi ? 'Kala' : 'Fish'}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Erikoisruokavaliot ja allergiat' : 'Special diets and allergies'}</span>
+                    <textarea name="excretory_diets"></textarea>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <span>{fi ? 'Osallistutko silliaamiaiselle?' : 'Are you attending to herring breakfast?'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="is_attending_sillis" value="yes" required checked>
+                        <span>{fi ? 'Kyllä' : 'Yes'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="is_attending_sillis" value="no">
+                        <span>{fi ? 'Ei' : 'No'}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Avecin nimi (HUOM! Avecing on ilmoittauduttava erikseen)' : '(NOTE! Avecs need to register separately)'}</span>
+                    <input type="text" name="avecs_name">
+                </label>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Pöytäseuruetoiveet ja muut terveiset' : 'Table party wishes and other greetings'}</span>
+                    <textarea name="other_info"></textarea>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <span>{fi ? 'Nimeni saa näkyä ilmoittautuneuiden listassa' : 'My name can be shown in the list of those who registered'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="show_name" value="yes" required checked>
+                        <span>{fi ? 'Kyllä' : 'Yes'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="show_name" value="no">
+                        <span>{fi ? 'Ei' : 'No'}</span>
+                    </label>
+                </div>
+            </div>
+    {#if invited}
+            <div class="flex-item six">
+                <span>{fi ? 'Esitän tervehdyksen' : 'I want to offer my greetings'}</span>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="is_greeting" value="yes" bind:group={is_greeting} required checked>
+                        <span>{fi ? 'Kyllä' : 'Yes'}</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="is_greeting" value="no"  bind:group={is_greeting}>
+                        <span>{fi ? 'Ei' : 'No'}</span>
+                    </label>
+                </div>
+            </div>
+        {#if is_greeting === 'yes'}
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Tervehdyksessä edustamasi taho(t)' : 'The entity you represent when greeting'}</span>
+                    <input type="text" name="party_representing" required>
+                </label>
+            </div>
+        {/if}
+    {/if}
+        <div class="flex-item six">
+            <label class="flex-row">
+                <span>{fi 
+                    ? 'Hyväksyn, että tietojani käytetään vuosijuhlien järjestämiseen. Tiedot poistetaan vuosijuhlien jälkeen.'
+                    : 'I consent that the data entered is used to organize the 50th anniversary event. Data is removed after the event.'}
+                </span>
+                <input type="checkbox" name="is_consenting" required>
+            </label>
+        </div>
+        <button type="submit">{fi ? 'Lähetä' : 'Send'}</button>
+        </form>
+    </div>
+    {#if $page.form?.body}
+    Lähetit ilmon seuraavilla tiedoilla:
+    {#each Object.entries($page.form?.body) as [key, data]}
+        <p>{key + ': ' + data}</p>
+    {/each}
+    {/if}
+</div>
+</section>
+<style lang="scss">
+    .flex-items {
+        
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+    
+        .flex-item {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            padding: 5px;
+            >label {
+                display: flex;
+                flex-direction: column;
+            }
+            .flex-row {
+                flex-direction: row;
+            }
+            span {
+                margin-bottom: 5px;
+            }
+        }
+    }
+</style>

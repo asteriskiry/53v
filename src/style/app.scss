@@ -1,0 +1,87 @@
+@use '_variables.scss' as v;
+
+html {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: v.$font-size;
+    letter-spacing: 0.02em;
+}
+body {
+    margin: 0;
+    p {
+        line-height: 140%;
+    }
+    .bold {
+        font-weight: 800;
+    }
+}
+section {
+    padding: 25px 0;
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        padding-top: 0;
+    }
+}
+
+a {
+    color: v.$font-color;
+}
+
+.wrap {
+    max-width: 1920px;
+    padding: 0 250px;
+    &.no {
+        padding: 0;
+    }
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 1px solid v.$btn-border-color;
+    font-size: v.$font-size;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid v.$btn-border-color;
+}
+
+.flex {
+    display: flex;
+    .flex-item {
+        &.three {
+            width: 25%;
+        }
+        &.four {
+            width: 33.3333333333333%;
+        }
+        &.six {
+            width: 50%;
+        }
+        &.nine {
+            width: 75%;
+        }
+        &.twelve {
+            width: 100%
+        }
+        .has-image {
+            width: 100%;
+            img {
+                width: 100%;
+            };
+        }
+    }
+}
+
+.content {
+    &.padded {
+        .flex >.flex-item {
+            padding: 40px;
+        }
+    }
+}
