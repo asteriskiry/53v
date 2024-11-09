@@ -30,13 +30,5 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/srv/53.asteriski.fi/"
           EXCLUDE: "/node_modules/, /.git/"
-
-      # Restart the PM2 process
-      - name: Restart PM2 process
-        uses: appleboy/ssh-action@v0.1.5
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
+          SCRIPT_AFTER: |
             pm2 restart sveltekit-app
