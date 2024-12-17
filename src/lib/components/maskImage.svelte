@@ -17,9 +17,9 @@
         padding: 20px;
         width: calc(100% - 40px);
         aspect-ratio: 1 / 1;
-        -webkit-mask: url(src/lib/assets/Asteriski_logo.svg) 50% 0 no-repeat;
+        -webkit-mask: url(v.$mask) 50% 0 no-repeat;
         -webkit-mask-size: contain;
-        mask: url(src/lib/assets/Asteriski_logo.svg) 50% 0 no-repeat;
+        mask: url(v.$mask) 50% 0 no-repeat;
         mask-size: contain;
         img {
             width: 100%;

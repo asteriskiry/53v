@@ -30,6 +30,8 @@ $screen-xl-min: 1600px;
 
 $divider: '/src/lib/assets/vali.png';
 $chain: '/src/lib/assets/sivu2.png';
+$mask: '/src/lib/assets/Asteriski_logo.svg';
+$mask-small: '/src/lib/assets/Asteriski_logo_copy.svg';
 
 @mixin xs {
     @media (max-width: #{$screen-xs-min}) {
