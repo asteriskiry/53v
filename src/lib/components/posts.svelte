@@ -53,7 +53,7 @@
         width: 100%;
         height: 50px;
         margin-top: 20px;
-        background-image: url(src/lib/assets/vali.png);
+        background-image: url(v.$divider);
         background-repeat: repeat-x;
         background-size: 33.33333%;
         background-position: 50% 50%;
