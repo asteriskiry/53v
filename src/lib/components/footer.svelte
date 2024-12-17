@@ -1,11 +1,13 @@
 <script>
 
 </script>
-
+<div class="abc">
+    <a href="/tesmi">></a>
+</div>
 <div class="footer wrap">
-    <div class="flex-items">
+    <div class="flex">
         <div class="flex-item six middle">
-            <a href="https://www.asteriski.fi" target="_blank">© Copyright 2024 Asteriski ry</a>
+            <a href="https://www.asteriski.fi" target="_blank">© Copyright {new Date().getFullYear()} Asteriski ry</a>
         </div>
     </div>
 </div>
@@ -14,12 +16,40 @@
 <style lang="scss">
     @use '../../style/variables' as v;
     .footer {
-        height: v.$footer_height;
-        .flex-items {
+        .flex {
+            height: v.$footer_height;
             display: flex;
             justify-content: center;
+            align-items: center;
             .middle {
                 text-align: center;
+            }
+        }
+    }
+    .abc {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background-color: v.$riski-green-light;
+        color: v.$riski-yellow;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-left: auto;
+        z-index: 100000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        a {
+            color: v.$riski-yellow;
+            text-decoration: none;
+            font-size: 30px;
+            text-align: center;
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                transform: scale(1.2); 
             }
         }
     }

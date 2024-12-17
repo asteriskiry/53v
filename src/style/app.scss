@@ -1,21 +1,50 @@
 @use '_variables.scss' as v;
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
 html {
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
+    background-color: v.$background-color;
+    color: v.$font-color;
+    font-family: "Poppins", sans-serif;
     font-size: v.$font-size;
     letter-spacing: 0.02em;
+    line-height: 140%;
 }
 body {
     margin: 0;
-    p {
-        line-height: 140%;
+    h1,h2,h3,h4 {
+        color: v.$font-gold;
+        font-size: v.$font-size-heading3;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h1 {
+        font-size: v.$font-size-heading1;
+    }
+    h2 {
+        font-size: v.$font-size-heading2;
+        color: white;
+        font-weight: 400;
+        text-shadow: 2px 2px 1px black;
+        -webkit-text-stroke: 0.5px black;
+        letter-spacing: 3px;
+    }
+    h1,h2 {
+        font-family: "Meow Script", cursive;
     }
     .bold {
         font-weight: 800;
     }
 }
+main {
+    position: relative;
+    z-index: 2;
+}
+
 section {
     padding: 25px 0;
     &:first-child {
@@ -24,17 +53,65 @@ section {
     &:last-child {
         padding-top: 0;
     }
+    @include v.lg {
+        padding: 10px 0;
+    }
 }
 
 a {
     color: v.$font-color;
 }
 
+.riski-bg {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    &:before {
+        content: "";
+        -webkit-mask: url(src/lib/assets/Asteriski_logo_copy.svg);
+        -webkit-mask-size: 100px 100px;
+        mask: url(src/lib/assets/Asteriski_logo_copy.svg) 0 0/50px 50px;
+        mask-size: 100px 150px;
+        mask-repeat: space space;
+        opacity: 0.03;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.flower-bg {
+    background-image: url(v.$chain);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.90);
+    background-blend-mode: lighten;
+}
+
 .wrap {
     max-width: 1920px;
     padding: 0 250px;
+    margin: 0 auto;
     &.no {
         padding: 0;
+    }
+    @include v.xl {
+        padding: 0 200px;
+    }
+    @include v.lg {
+        padding: 0 150px;
+    }
+    @include v.md {
+        padding: 0 100px;
+    }
+    @include v.sm {
+        padding: 0 50px;
+    }
+    @include v.xs {
+        padding: 0 25px;
     }
 }
 
@@ -45,15 +122,27 @@ input, textarea {
 }
 
 button {
-    background-color: transparent;
+    background-color: v.$font-gold;
     border-radius: 5px;
-    padding: 5px 10px;
-    border: 1px solid v.$btn-border-color;
+    padding: 5px 20px;
+    border: 2px solid v.$font-gold;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+    margin-left: auto;
+    &:hover {
+        color: v.$font-gold;
+        background-color: white;
+        cursor: pointer;
+    }
 }
 
 .flex {
     display: flex;
     .flex-item {
+        &.two {
+            width: 16.6666666666666%;
+        }
         &.three {
             width: 25%;
         }
@@ -62,6 +151,9 @@ button {
         }
         &.six {
             width: 50%;
+        }
+        &.eight {
+            width: 66.6666666666666%;
         }
         &.nine {
             width: 75%;
@@ -76,12 +168,38 @@ button {
             };
         }
     }
+    &.flex-column {
+        flex-direction: column;
+    }
 }
 
 .content {
     &.padded {
-        .flex >.flex-item {
-            padding: 40px;
+        .flex {
+            >.flex-item {
+               
+            }
+        }
+        @include v.lg {
+            .flex {
+                >.flex-item {
+                    padding: 0px;
+                }
+            } 
+        }
+        @include v.ml {
+            .flex {
+                flex-direction: column;
+                >.flex-item {
+                    width: 100%;
+                    
+                }
+            }
         }
     }
+}
+
+.bordered {
+    border: 15px solid v.$font-gold;
+    border-radius: 20px;
 }

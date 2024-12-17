@@ -9,7 +9,8 @@
 </script>
 <section>
 <div class="wrap">
-    <div class="flex-items">
+    <div class="flex-items bordered flower-bg">
+        <h2>Ilmoittautuminen</h2>
         <form method="POST" action="?/{invited ? 'invited' : 'guest'}" use:enhance>
             <div class="flex-item six">
                 <label>
@@ -141,14 +142,16 @@
     {/if}
         <div class="flex-item six">
             <label class="flex-row">
+                <input type="checkbox" name="is_consenting" required>
                 <span>{fi 
                     ? 'Hyväksyn, että tietojani käytetään vuosijuhlien järjestämiseen. Tiedot poistetaan vuosijuhlien jälkeen.'
                     : 'I consent that the data entered is used to organize the 50th anniversary event. Data is removed after the event.'}
                 </span>
-                <input type="checkbox" name="is_consenting" required>
             </label>
         </div>
-        <button type="submit">{fi ? 'Lähetä' : 'Send'}</button>
+        <div class="flex-item six">
+            <button type="submit">{fi ? 'Lähetä' : 'Send'}</button>
+        </div>
         </form>
     </div>
     {#if $page.form?.body}
@@ -160,11 +163,18 @@
 </div>
 </section>
 <style lang="scss">
+    @use '../../style/variables' as v;
     .flex-items {
         
         form {
             width: 50%;
             margin: 0 auto;
+            @include v.lg {
+                width: 80%;
+            }
+            @include v.ml {
+                width: 100%;
+            }
         }
     
         .flex-item {
@@ -175,12 +185,66 @@
             >label {
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 10px;
             }
             .flex-row {
                 flex-direction: row;
+                align-items: center;
+                font-size: 12px;
             }
             span {
-                margin-bottom: 5px;
+                filter: drop-shadow(0 1mm 5mm #000);
+                vertical-align: bottom;
+                cursor: pointer;
+            }
+        }
+    }
+
+    input, textarea {
+        border: 2px solid v.$font-gold;
+    }
+    input {
+        height: 36px;
+    }
+
+    input[type="radio"] {
+        margin-top: 0;
+        width: 1.3em;
+        height: 1.3em;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid v.$background-color-light-gray;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked {
+        background-color: v.$font-gold;
+    }
+    input[type="checkbox"] {
+        margin-right: 15px;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+
+    .options {
+        >label {
+            margin-right: 50px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        @include v.md {
+            display: flex;
+            flex-direction: column;
+            >label {
+                margin-right: 0px;
+                margin-bottom: 10px;
             }
         }
     }

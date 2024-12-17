@@ -1,9 +1,68 @@
-$font-size: 20px;
-$font-color: white;
-$background-color: black;
+$font-size: 16px;
+$font-size-heading1: 24px;
+$font-size-heading2: 50px;
+$font-size-heading3: 20px;
+$font-color: black;
+$font-color-dark: black;
+$font-color-light: white;
+$font-gold: #cba851;
+$background-color: #FFF0F0;
+$background-color2: #6db27f;
+$background-color-gray: #696969;
+$background-color-light-gray: #bbbbbb;
+$riski-green-dark: #00290B;
+$riski-green-light: #338C26;
+$riski-yellow: #FCC917;
+
 $btn-hover-color: white;
 $btn-hover-text-color: black;
 $btn-border-color: white;
 
 $header_height: 80px;
 $footer_height: 80px;
+
+$screen-xs-min: 480px;
+$screen-sm-min: 600px;
+$screen-md-min: 800px;
+$screen-ml-min: 1000px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1600px;
+
+$divider: '/src/lib/assets/vali.png';
+$chain: '/src/lib/assets/sivu2.png';
+
+@mixin xs {
+    @media (max-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin ml {
+    @media (max-width: #{$screen-ml-min}) {
+        @content;
+    }
+}
+ 
+@mixin lg {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+ 
+@mixin xl {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+}

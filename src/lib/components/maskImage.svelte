@@ -12,14 +12,24 @@
 
 
 <style lang="scss">
+    @use '../../style/variables' as v;
     .image {
-        width: 100%;
-        -webkit-mask: url(src/lib/assets/Asteriski_logo.svg) 0 no-repeat;
-        -webkit-mask-size: cover;
-        mask: url(src/lib/assets/Asteriski_logo.svg) 0 no-repeat;
-        mask-size: cover;
+        padding: 20px;
+        width: calc(100% - 40px);
+        aspect-ratio: 1 / 1;
+        -webkit-mask: url(src/lib/assets/Asteriski_logo.svg) 50% 0 no-repeat;
+        -webkit-mask-size: contain;
+        mask: url(src/lib/assets/Asteriski_logo.svg) 50% 0 no-repeat;
+        mask-size: contain;
         img {
-            width: 100%;  
+            width: 100%;
+            object-fit: cover;
+            height: 100%; 
+        }
+
+        @include v.ml {
+            max-width: 50%;
+            margin: 0 auto;
         }
     }
 </style>
