@@ -3,7 +3,7 @@ export const load = async ({fetch, params }) => {
 
     if (response.ok) {
         const data = await response.json();
-        
+
         return {
             posts: data
         };
