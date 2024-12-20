@@ -31,5 +31,10 @@
             max-width: 50%;
             margin: 0 auto;
         }
+        @include v.sm {
+            padding: 10px;
+            max-width: 50%;
+            margin: 0 auto;
+        }
     }
 </style>
