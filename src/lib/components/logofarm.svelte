@@ -2,9 +2,10 @@
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     import visma from "$lib/assets/visma.svg";
     import reaktor from "$lib/assets/reaktor.svg";
+    export let id = 'sponsors';
 </script>
 
-<section class="sponsors">
+<section id="{id}" class="sponsors">
     <div class="wrap">
         <h2>Sponsorit</h2>
         <div class="flex">

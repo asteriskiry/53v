@@ -1,9 +1,10 @@
 <script>
     export let lang = 'fi';
     export let posts;
+    export let id = 'news';
     
 </script>
-<section class="posts">
+<section id="{id}" class="posts">
     <div class="wrap">
         <div class="content padded">
             <div class="divider">

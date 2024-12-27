@@ -1,8 +1,9 @@
 <script>
     export let lang = 'fi';
+    export let id = 'menu';
 </script>
 
-<section class="menu">
+<section id="{id}" class="menu">
     <div class="wrap">
         <div class="flex flex-column center bordered flower-bg">
             <h2>Menu</h2>

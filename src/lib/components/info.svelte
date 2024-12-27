@@ -3,9 +3,10 @@
     import img from "$lib/assets/vuju.jpg";
     export let lang = 'fi';
     export let mask = false;
+    export let id = 'info';
 </script>
 
-<section class="info flower-bg">
+<section id="{id}" class="info flower-bg">
     <div class="wrap">
         <div class="content padded">
             <div class="flex">

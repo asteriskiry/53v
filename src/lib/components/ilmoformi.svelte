@@ -2,12 +2,12 @@
     import { enhance } from '$app/forms';
     import { page } from '$app/stores';
     export let invited = false;
-
+    export let id = 'ilmo';
     let fi = true;
     let is_greeting = 'yes';
 
 </script>
-<section>
+<section id="{id}">
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>Ilmoittautuminen</h2>

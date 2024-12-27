@@ -1,7 +1,7 @@
 <script>
 
 </script>
-<div class="abc">
+<div class="scroller">
     <a href="/tesmi">></a>
 </div>
 <div class="footer wrap">
@@ -26,7 +26,7 @@
             }
         }
     }
-    .abc {
+    .scroller {
         position: fixed;
         bottom: 50px;
         right: 50px;
@@ -36,7 +36,7 @@
         height: 60px;
         border-radius: 50%;
         margin-left: auto;
-        z-index: 100000;
+        z-index: 100;
         display: flex;
         align-items: center;
         justify-content: center;

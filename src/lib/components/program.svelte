@@ -3,8 +3,9 @@
     import reaktor from "$lib/assets/reaktor.svg";
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     export let lang = 'fi';
+    export let id = 'program';
 </script>
-<section class="program riski-bg">
+<section id="{id}" class="program riski-bg">
 <div class="wrap">
     <div class="content padded">
         <div class="flex flex-column">
