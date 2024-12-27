@@ -25,11 +25,12 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.0
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "--delete"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/srv/53.asteriski.fi/"
           EXCLUDE: "/node_modules/, /.git/"
+        with:
+          ARGS: "--delete"
           SCRIPT_AFTER: |
             cd /srv/53.asteriski.fi
             chown -R github:github /srv/53.asteriski.fi
