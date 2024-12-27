@@ -1,16 +1,18 @@
 export const load = async ({fetch, params }) => {
-    /* const response = await fetch(import.meta.env.VITE_PUBLIC_API_URL);
-
+    const api = 'https://api.viiskyt.asteriski.fi/api/participants/'
+    const response = await fetch(api);
+    
     if (response.ok) {
         const data = await response.json();
 
         return {
-            participants: data
+            participants: data,
+            api: api
         };
-    } */
+    }
 
     return {
         participants: [],
-        api: import.meta.env.VITE_PUBLIC_API_URL
+        api: api
     };
 }
