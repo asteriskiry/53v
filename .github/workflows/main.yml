@@ -34,4 +34,4 @@ jobs:
           SCRIPT_AFTER: |
             cd /srv/53.asteriski.fi
             chown -R github:github /srv/53.asteriski.fi
-            pm2 restart sveltekit-app
+            /root/.nvm/versions/node/v18.16.0/bin/pm2 restart sveltekit-app
