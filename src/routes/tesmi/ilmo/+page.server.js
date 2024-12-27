@@ -6,7 +6,7 @@ export const actions = {
         data.forEach((value, key) => body[key] = value);
         body = JSON.stringify(body);
 
-        const response = await fetch(import.meta.env.VITE_PUBLIC_API_URL, {
+        const response = await fetch('https://api.viiskyt.asteriski.fi/api/participants/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body
