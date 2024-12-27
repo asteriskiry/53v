@@ -31,4 +31,5 @@ jobs:
           TARGET: "/srv/53.asteriski.fi/"
           EXCLUDE: "/node_modules/, /.git/"
           SCRIPT_AFTER: |
+            chown -R github:github /srv/53.asteriski.fi
             pm2 restart sveltekit-app
