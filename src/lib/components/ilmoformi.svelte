@@ -3,6 +3,7 @@
     import { page } from '$app/stores';
     export let invited = false;
     export let id = 'ilmo';
+    export let form;
     let fi = true;
     let is_greeting = 'yes';
 
@@ -11,27 +12,32 @@
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>Ilmoittautuminen</h2>
-        <form method="POST" action="?/{invited ? 'invited' : 'guest'}" use:enhance>
+        {#if form?.success !== true}
+        <form method="POST" action="?/{invited ? 'invited' : 'invited'}" use:enhance>
+            <div class="flex-item twelve row">
+                <a href=".">Etusivulle</a>
+                <a href="/tesmi/participants">Ilmoittautuneet</a>
+            </div>
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Etunimi' : 'First name'}</span>
+                    <span>{fi ? 'Etunimi' : 'First name'}*</span>
                     <input type="text" name="first_name" required>
                 </label>
             </div>
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Sukunimi' : 'Last name'}</span>
+                    <span>{fi ? 'Sukunimi' : 'Last name'}*</span>
                     <input type="text" name="last_name" required>
                 </label>
             </div>
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Sähköposti' : 'Email'}</span>
+                    <span>{fi ? 'Sähköposti' : 'Email'}*</span>
                     <input type="email" name="email" required>
                 </label>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Asteriskin jäsen' : 'Asteriski member'}</span>
+                <span>{fi ? 'Asteriskin jäsen' : 'Asteriski member'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="is_asteriski_member" value="yes" required checked>
@@ -44,7 +50,7 @@
                 </div>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Juoma' : 'Drink'}</span>
+                <span>{fi ? 'Juoma' : 'Drink'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="is_alcohol_free" value="no" required checked>
@@ -57,7 +63,7 @@
                 </div>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Menu' : 'Menu'}</span>
+                <span>{fi ? 'Menu' : 'Menu'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="menu" value="LI" required checked>
@@ -80,7 +86,7 @@
                 </label>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Osallistutko silliaamiaiselle?' : 'Are you attending to herring breakfast?'}</span>
+                <span>{fi ? 'Osallistutko silliaamiaiselle?' : 'Are you attending to herring breakfast?'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="is_attending_sillis" value="yes" required checked>
@@ -105,7 +111,7 @@
                 </label>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Nimeni saa näkyä ilmoittautuneuiden listassa' : 'My name can be shown in the list of those who registered'}</span>
+                <span>{fi ? 'Nimeni saa näkyä ilmoittautuneuiden listassa' : 'My name can be shown in the list of those who registered'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="show_name" value="yes" required checked>
@@ -119,7 +125,7 @@
             </div>
     {#if invited}
             <div class="flex-item six">
-                <span>{fi ? 'Esitän tervehdyksen' : 'I want to offer my greetings'}</span>
+                <span>{fi ? 'Esitän tervehdyksen' : 'I want to offer my greetings'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="is_greeting" value="yes" bind:group={is_greeting} required checked>
@@ -134,7 +140,7 @@
         {#if is_greeting === 'yes'}
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Tervehdyksessä edustamasi taho(t)' : 'The entity you represent when greeting'}</span>
+                    <span>{fi ? 'Tervehdyksessä edustamasi taho(t)' : 'The entity you represent when greeting'}*</span>
                     <input type="text" name="party_representing" required>
                 </label>
             </div>
@@ -145,21 +151,40 @@
                 <input type="checkbox" name="is_consenting" required>
                 <span>{fi 
                     ? 'Hyväksyn, että tietojani käytetään vuosijuhlien järjestämiseen. Tiedot poistetaan vuosijuhlien jälkeen.'
-                    : 'I consent that the data entered is used to organize the 50th anniversary event. Data is removed after the event.'}
+                    : 'I consent that the data entered is used to organize the 50th anniversary event. Data is removed after the event.'}*
                 </span>
             </label>
         </div>
-        <div class="flex-item six">
+        <div class="flex-item six row">
+        {#if form?.success === false}
+            {#if form?.ilmo === false}
+            <p class="bold">{fi
+                ?'Ilmoittautuminen ei ole auki!'
+                : 'Registration is not open!'}
+            </p>
+            {:else}
+            <p class="bold">{fi
+                ?'Jotain meni pieleen. Yritä hetken kuluttua uudelleen.'
+                : 'Something went wrong. Please try again later.'}
+            </p>
+            {/if}
+        {/if}
             <button type="submit">{fi ? 'Lähetä' : 'Send'}</button>
         </div>
         </form>
+        {:else}
+        <div class="flex-item six thanks">
+            <h3>{fi
+                ? 'Kiitos ilmoittautumisesta!'
+                : 'Thanks!'}
+            </h3>
+            <a href="/tesmi/ilmo">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
+            <a href="/tesmi/participants">{fi ? 'Katso ilmoittautuneet' : 'See registered'}</a>
+            <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
+        </div>
+        
+        {/if}
     </div>
-    {#if $page.form?.body}
-    Lähetit ilmon seuraavilla tiedoilla:
-    {#each Object.entries($page.form?.body) as [key, data]}
-        <p>{key + ': ' + data}</p>
-    {/each}
-    {/if}
 </div>
 </section>
 <style lang="scss">
@@ -196,6 +221,15 @@
                 filter: drop-shadow(0 1mm 5mm #000);
                 vertical-align: bottom;
                 cursor: pointer;
+            }
+            &.row {
+                flex-direction: row;
+                a:first-of-type {
+                    margin-right: auto;
+                }
+                a:last-of-type {
+                    margin-left: auto;
+                }
             }
         }
     }
@@ -246,6 +280,12 @@
                 margin-right: 0px;
                 margin-bottom: 10px;
             }
+        }
+    }
+    .thanks {
+        align-items: center;
+        a {
+            margin: 5px 0;
         }
     }
 </style>

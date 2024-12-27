@@ -3,4 +3,4 @@
     export let form;
 </script>
 
-<Ilmo {form}/>
+<Ilmo {form} invited={true}/>

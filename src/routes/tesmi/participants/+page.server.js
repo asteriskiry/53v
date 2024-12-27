@@ -7,12 +7,10 @@ export const load = async ({fetch, params }) => {
 
         return {
             participants: data,
-            api: api
         };
     }
 
     return {
         participants: [],
-        api: api
     };
 }

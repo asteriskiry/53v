@@ -2,7 +2,6 @@
     export let data;
     const participants = data.participants;
     console.log(data.participants)
-    console.log(data.api)
 </script>
 
 
