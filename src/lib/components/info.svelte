@@ -1,17 +1,19 @@
 <script>
     import MaskImage from "$lib/components/maskImage.svelte";
-    import img from "$lib/assets/vuju.jpg";
+    export let img;
     export let lang = 'fi';
     export let mask = false;
     export let id = 'info';
+    export let background = true;
 </script>
 
-<section id="{id}" class="info flower-bg">
+<section id="{id}" class="info {background ? 'flower-bg' : ''}">
     <div class="wrap">
         <div class="content padded">
             <div class="flex">
                 <div class="flex-item six center">
                     <div class="has-image">
+                    {#if img}
                         {#if mask}
                             <MaskImage {img}/>
                         {:else}
@@ -19,6 +21,7 @@
                                 <img src="{img}" alt="logo">
                             </div>
                         {/if}
+                    {/if}
                     </div>
                 </div>
                 <div class="flex-item six center">

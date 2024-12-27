@@ -6,12 +6,13 @@
     import Posts from "$lib/components/posts.svelte";
     import Menu from "$lib/components/menu.svelte";
     import Logofarm from "$lib/components/logofarm.svelte";
+    import infoImg from "$lib/assets/vuju.jpg"
     export let data;
 
 </script>
 <Banner/>
 <Program/>
-<Info mask={true}/>
+<Info mask={true} img={infoImg}/>
 <Posts posts={data.posts}/>
 <Menu/>
 <Logofarm />
