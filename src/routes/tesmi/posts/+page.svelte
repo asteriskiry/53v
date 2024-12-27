@@ -7,10 +7,11 @@
             method: 'GET'
         });
 
-        const data = await response.json();
-        console.log(data);
+        const data2 = await response.json();
+        console.log(data2);
     }
+    console.log(data);
 </script>
 
-<Posts posts={data.posts}/>
+<!-- <Posts posts={data.posts}/> -->
 <button on:click={getPosts}>nappula</button>
