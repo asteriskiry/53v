@@ -8,15 +8,15 @@ export const actions = {
         data.forEach((value, key) => body[key] = value);
         body = JSON.stringify(body);
 
-        return {
-            body
-        }
-
         const response = await fetch('https://api.viiskyt.asteriski.fi/api/participants/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body
         })
+
+        return {
+            body: response
+        }
 
         const res = await response.json();
 
