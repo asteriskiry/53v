@@ -4,119 +4,124 @@
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     export let lang = 'fi';
     export let id = 'program';
+    export let title = {
+        fi: 'Ohjelma',
+        en: 'The program'
+    }
+    export let texts = [
+        {
+            fi: {
+                left: [
+                    'Cocktail-tilaisuus', 
+                    'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Turun yliopiston päärakennuksessa (Henrikinkatu 2, 20500 Turku) kello 14.30 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja, cocktailpalat sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Kaikki vuosijuhlaosallistujat ovat tervetulleita seuraamaan tilaisuutta. Cocktail-tilaisuudesta lähtee kuljetukset itse pääjuhlaan klo 17.00 osoitteesta Naturankuja. Voit myös saapua suoraan pääjuhlaan.'],
+                right: 'Cocktail-tilaisuudessa mukana:'
+            },
+            en: {
+                left: [
+                    'Cocktail party', 
+                    'text'
+                ],
+                right: 'Cocktail party sponsor:'
+            },
+            imgs: [
+                {href:'https://www.mankelisolutions.fi/', src: mankeli, alt: 'Mankeli Solutions logo'}
+            ]
+        },
+        {
+            fi: {
+                left: [
+                    'Pääjuhla',
+                    'Asteriskin 50-vuotisjuhlien pääjuhlaa vietetään Turun VPK:n talolla (Eskelinkatu 5, 20100 Turku). Ovet tilaisuuteen avataan klo 17.00 ja itse pääjuhla alkaa klo 18:00. Juhlassa kunnioitamme rakasta ainejärjestöämme puhein ja tervehdyksin. Lisäksi nautimme kolmen ruokalajin illallisen ja jaamme tunnustuksia henkilöille, jotka ovat olleet vuosien varrella mukana rakentamasta Asteriskista sellaisen kuin se tänä päivänä on. Pääjuhlan päätyttyä tanssitaan akateemiset tanssit.'
+                ],
+                right: 'Pääjuhlassa mukana:'
+            },
+            en: {
+                left: [
+                    'Main event', 
+                    'text'
+                ],
+                right: 'Main event sponsor:'
+            },
+            imgs: [
+                {href:'https://www.reaktor.com/', src: reaktor, alt: 'Reaktor logo'}
+            ]
+        },
+        {
+            fi: {
+                left: [
+                    'Jatkot',
+                    'Pääjuhlan loputtua vieraat kuljetetaan salaiseen jatkopaikkaan. Jatkoilta on bussikuljetukset takaisin keskustaan ja yliopistolle. Kuljetukset saapuvat yliopistolle noin klo 03.00 ja 04.00.'
+                ],
+                right: 'Jatkoilla mukana:'
+            },
+            en: {
+                left: [
+                    'After party', 
+                    'text'
+                ],
+                right: 'After party sponsor:'
+            },
+            imgs: [
+                {href:'', src: logo, alt: 'logo'},
+                {href:'', src: logo, alt: 'logo'}
+            ]
+        },
+        {
+            fi: {
+                left: [
+                    'Sillis',
+                    'Pääjuhlaa ja jatkoja seuraa sunnuntaina 2. lokakuuta eeppinen sirkusteemainen silliaamiainen, jota et halua missata! Silliksellä juhlakansaa odottaa maittava aamiainen sekä olotiloja tasoittavaa juomaa. Otathan sillikselle mukaan pyyhkeen sekä uima-asun saunomista varten. Yleisen viihtyvyyden vuoksi huomioithan, että pesutiloissa on uima-asu pakko! Sillikselle kuljemme yhteisellä bussikuljetuksella sunnuntaina. Bussit sillikselle lähtevät kello 11:00 ja 12:00 osoitteesta Vesilinnantie 5. Ole ajoissa paikalla sillä bussit ei odota myöhästelijöitä! Sillistä varten kannattaa varata rento asu. Kuljetukset sillikselt yliopistolle ovat perillä noin 17.30 ja 18.30.'
+                ],
+                right: 'Silliksellä mukana:'
+            },
+            en: {
+                left: [
+                    'Herring Breakfast', 
+                    'text'
+                ],
+                right: 'Herring Breakfast sponsor:'
+            },
+            imgs: [
+                {href:'', src: logo, alt: 'logo'},
+                {href:'', src: logo, alt: 'logo'}
+            ]
+        },
+    ];
 </script>
 <section id="{id}" class="program riski-bg">
 <div class="wrap">
     <div class="content padded">
         <div class="flex flex-column">
             <div class="flex-item six has-title">
-                <h2>{lang === 'fi' ? 'Ohjelma' : 'THE PROGRAM'}</h2>
+                <h2>{lang === 'fi' ? title.fi : title.en}</h2>
             </div>
+        {#each texts as text}
             <div class="flex flex-item twelve">
-                <div class="flex-item six has-text">
-                    <h3>{lang === 'fi' ? 'Cocktail-tilaisuus' : 'Cocktail party'}</h3>
+                <div class="flex-item six has-text {text.imgs ? '' : 'no-imgs'}">
+                    <h3>{lang === 'fi' ? text.fi.left[0] : text.en.left[0]}</h3>
                     <p>
-                        {lang === 'fi' ? 
-                            'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Turun yliopiston päärakennuksessa (Henrikinkatu 2, 20500 Turku) kello 14.30 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja, cocktailpalat sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Kaikki vuosijuhlaosallistujat ovat tervetulleita seuraamaan tilaisuutta. Cocktail-tilaisuudesta lähtee kuljetukset itse pääjuhlaan klo 17.00 osoitteesta Naturankuja. Voit myös saapua suoraan pääjuhlaan.' : 
-                            'THE PROGRAM'
+                        {lang === 'fi' ? text.fi.left[1] : text.en.left[1]
                         }
                     </p>
                 </div>
+                {#if text.imgs}
                 <div class="flex-item four has-sponsors">
                     <h3>
-                        {lang === 'fi' ? 'Cocktail-tilaisuussa mukana:' : 'Cocktail party:'}
+                        {lang === 'fi' ? text.fi.right : text.en.right}
                     </h3>
                     <div class="sponsors flex">
+                        {#each text?.imgs as img}
                         <div class="flex-item six">
-                            <a href="https://www.mankelisolutions.fi/">
-                                <img src="{mankeli}" alt="Mankeli Solutions logo">
+                            <a href={img.href}>
+                                <img src="{img.src}" alt="{img.alt}">
                             </a>
                         </div>
+                        {/each}
                     </div>
                 </div>
-            </div>
-            <div class="flex flex-item twelve">
-                <div class="flex-item six has-text">
-                    <h3>{lang === 'fi' ? 'Pääjuhla' : 'Main event'}</h3>
-                    <p>
-                        {lang === 'fi' ? 
-                            'Asteriskin 50-vuotisjuhlien pääjuhlaa vietetään Turun VPK:n talolla (Eskelinkatu 5, 20100 Turku). Ovet tilaisuuteen avataan klo 17.00 ja itse pääjuhla alkaa klo 18:00. Juhlassa kunnioitamme rakasta ainejärjestöämme puhein ja tervehdyksin. Lisäksi nautimme kolmen ruokalajin illallisen ja jaamme tunnustuksia henkilöille, jotka ovat olleet vuosien varrella mukana rakentamasta Asteriskista sellaisen kuin se tänä päivänä on. Pääjuhlan päätyttyä tanssitaan akateemiset tanssit.' : 
-                            'THE PROGRAM'
-                        }
-                    </p>
-                </div>
-                <div class="flex-item four has-sponsors">
-                    <h3>
-                        {lang === 'fi' ? 'Pääjuhlassa mukana:' : 'Cocktail party:'}
-                    </h3>
-                    <div class="sponsors flex">
-                        <div class="flex-item six">
-                            <a href="https://www.reaktor.com/">
-                                <img src="{reaktor}" alt="Reaktor logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-item twelve">
-                <div class="flex-item six has-text">
-                    <h3>{lang === 'fi' ? 'Jatkot' : 'Cocktail party'}</h3>
-                    <p>
-                        {lang === 'fi' ? 
-                            'Pääjuhlan loputtua vieraat kuljetetaan salaiseen jatkopaikkaan. Jatkoilta on bussikuljetukset takaisin keskustaan ja yliopistolle. Kuljetukset saapuvat yliopistolle noin klo 03.00 ja 04.00.' : 
-                            'THE PROGRAM'
-                        }
-                    </p>
-                </div>
-                <div class="flex-item four has-sponsors">
-                    <h3>
-                        {lang === 'fi' ? 'Jatkoilla mukana:' : 'Cocktail party:'}
-                    </h3>
-                    <div class="sponsors flex">
-                        <div class="flex-item six">
-                            <a href="">
-                                <img src="{logo}" alt="">
-                            </a>
-                        </div>
-                        <div class="flex-item six">
-                            <a href="">
-                                <img src="{logo}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-item twelve"> 
-                <div class="flex-item six has-text">
-                    <h3>{lang === 'fi' ? 'Sillis' : 'Cocktail party'}</h3>
-                {#if lang === 'fi'}
-                    <p>
-                        Pääjuhlaa ja jatkoja seuraa sunnuntaina 2. lokakuuta eeppinen sirkusteemainen silliaamiainen, jota et halua missata!
-                        Silliksellä juhlakansaa odottaa maittava aamiainen sekä olotiloja tasoittavaa juomaa. Otathan sillikselle mukaan pyyhkeen sekä uima-asun saunomista varten. Yleisen viihtyvyyden vuoksi huomioithan, että pesutiloissa on uima-asu pakko!
-                        Sillikselle kuljemme yhteisellä bussikuljetuksella sunnuntaina. Bussit sillikselle lähtevät kello 11:00 ja 12:00 osoitteesta Vesilinnantie 5. Ole ajoissa paikalla sillä bussit ei odota myöhästelijöitä! Sillistä varten kannattaa varata rento asu. Kuljetukset sillikselt yliopistolle ovat perillä noin 17.30 ja 18.30.
-                    </p>
-                {:else}
-                    THE PROGRAM
                 {/if}
-                </div>
-                <div class="flex-item four has-sponsors">
-                    <h3>
-                        {lang === 'fi' ? 'Silliksellä mukana:' : 'Cocktail party:'}
-                    </h3>
-                    <div class="sponsors flex">
-                        <div class="flex-item four">
-                            <a href="">
-                                <img src="{logo}" alt="">
-                            </a>
-                        </div>
-                        <div class="flex-item four">
-                            <a href="">
-                                <img src="{logo}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
+        {/each}
         </div>
     </div>
 </div>
@@ -134,6 +139,9 @@
         }
         @include v.ml {
             padding: 40px 0;
+        }
+        p {
+            white-space: pre-wrap;
         }
     }
 
@@ -166,11 +174,6 @@
                     margin-top: 10px
                 }
             }
-            @include v.ml {
-                &.four {
-                    max-width: 150px;
-                }
-            }
             a {
                 display: flex;
                 justify-content: center;
@@ -194,6 +197,10 @@
         }
         &.twelve {
             padding: 20px 0;
+        }
+        &.no-imgs {
+            width: 100%;
+            max-width: 800px;
         }
     }
 
