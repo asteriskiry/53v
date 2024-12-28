@@ -13,7 +13,7 @@
     <div class="flex-items bordered flower-bg">
         <h2>Ilmoittautuminen</h2>
         {#if form?.success !== true}
-        <form method="POST" action="?/{invited ? 'invited' : 'invited'}" use:enhance>
+        <form method="POST" use:enhance>
             <div class="flex-item twelve row">
                 <a href=".">Etusivulle</a>
                 <a href="/tesmi/participants">Ilmoittautuneet</a>
