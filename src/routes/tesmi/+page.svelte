@@ -55,6 +55,6 @@
 <Info mask={true} img={infoImg}/>
 <Posts posts={data.posts}/>
 <Menu/>
-<Program title={etiquetteTitle} texts={etiquette} id={'etiquette'} lang={'en'}/>
+<Program title={etiquetteTitle} texts={etiquette} id={'etiquette'}/>
 <Logofarm />
 <Footer/>
