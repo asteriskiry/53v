@@ -12,8 +12,8 @@
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>Ilmoittautuminen</h2>
-        {#if form?.error}
-            {console.log(form?.error)}
+        {#if form?.body}
+            {console.log(form?.body)}
         {/if}
         {#if form?.success !== true}
         <form method="POST" use:enhance>

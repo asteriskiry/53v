@@ -7,7 +7,11 @@ export const actions = {
         let body = {};
         data.forEach((value, key) => body[key] = value);
         body = JSON.stringify(body);
-    try {
+
+        return {
+            body
+        }
+
         const response = await fetch('https://api.viiskyt.asteriski.fi/api/participants/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
@@ -30,11 +34,5 @@ export const actions = {
 		return fail(400, { 
             success: false
         });
-    } catch (error) {
-        console.error(error);
-        return {
-            error
-        }
-    }
 	},
 };
