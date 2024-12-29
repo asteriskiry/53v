@@ -221,6 +221,7 @@
 					height: 100vh;
 					z-index: 1000;
                     background: linear-gradient(-90deg, v.$background-banner-yellow, v.$background-banner-green 200%) no-repeat;
+                    overflow-y: scroll;
 					ul {
 						padding-top: 70px;
 						display: flex;
@@ -342,6 +343,29 @@
         }
         #banner {
             padding: 50px 0;
+        }
+    }
+    @media (max-height: 650px) {
+        .mobile-nav .menu-toggle {
+            top: 10px;
+        }
+    }
+    @media (max-height: 600px) {
+        .top {
+            height: 100px;
+        }
+        .logo {
+            max-width: 300px;
+        }
+        #banner {
+            padding: 25px 0;
+        }
+            .nav-links a:nth-child(1) { top: 22%; left: 20%; }
+            .nav-links a:nth-child(2) { top: 22%; left: 80%; }
+    }
+    @media (max-height: 500px) {
+        .logo {
+            max-width: 250px;
         }
     }
   </style>
