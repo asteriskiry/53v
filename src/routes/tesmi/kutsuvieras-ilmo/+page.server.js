@@ -14,10 +14,6 @@ export const actions = {
             body
         })
 
-        return {
-            body: response
-        }
-
         const res = await response.json();
 
         if (response.ok) {
