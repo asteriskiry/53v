@@ -1,10 +1,9 @@
 <script>
     import { enhance } from '$app/forms';
-    import { page } from '$app/stores';
     export let invited = false;
     export let id = 'ilmo';
     export let form;
-    let fi = true;
+    export let fi = true;
     let is_greeting = 'yes';
 
 </script>
@@ -12,14 +11,11 @@
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>Ilmoittautuminen</h2>
-        {#if form?.body}
-            {console.log(form?.body)}
-        {/if}
         {#if form?.success !== true}
         <form method="POST" use:enhance>
             <div class="flex-item twelve row">
-                <a href=".">Etusivulle</a>
-                <a href="/tesmi/participants">Ilmoittautuneet</a>
+                <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
+                <a href="{fi ? '/tesmi/participants' : '/tesmi/en/participants'}">{fi ? 'Ilmoittautuneet' : 'Registered'}</a>
             </div>
             <div class="flex-item six">
                 <label>
@@ -37,6 +33,12 @@
                 <label>
                     <span>{fi ? 'Sähköposti' : 'Email'}*</span>
                     <input type="email" name="email" required>
+                </label>
+            </div>
+            <div class="flex-item six">
+                <label>
+                    <span>{fi ? 'Opintojen aloitusvuosi' : 'Starting year of studies'}</span>
+                    <input type="number" name="starting_year">
                 </label>
             </div>
             <div class="flex-item six">
@@ -179,10 +181,10 @@
         <div class="flex-item six thanks">
             <h3>{fi
                 ? 'Kiitos ilmoittautumisesta!'
-                : 'Thanks!'}
+                : 'Thanks you for registration'}
             </h3>
-            <a href="/tesmi/ilmo">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
-            <a href="/tesmi/participants">{fi ? 'Katso ilmoittautuneet' : 'See registered'}</a>
+            <a href="{invited ? (fi ? '/tesmi/kutsuvieras-ilmo' : '/tesmi/en/kutsuvieras-ilmo') : (fi ? '/tesmi/ilmo' : '/tesmi/en/ilmo')}">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
+            <a href="{fi ? '/tesmi/participants' : '/tesmi/en/participants'}">{fi ? 'Katso ilmoittautuneet' : 'See registered'}</a>
             <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
         </div>
         

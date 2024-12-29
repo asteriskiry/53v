@@ -34,7 +34,7 @@
                                     {new Date(post.date).toLocaleDateString()}
                                 </div>
                                 <div class="flex-item three">
-                                    <a href="{post.link}" target="_blank"> {lang === 'fi' ? 'Lue lisää' : 'Read more:'}</a>
+                                    <a href="{post.link}" target="_blank"> {lang === 'fi' ? 'Lue lisää' : 'Read more'}</a>
                                 </div>
                             </div>
                                 

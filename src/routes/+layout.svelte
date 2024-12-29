@@ -1,5 +1,5 @@
 <script>
-    import '../style/app.scss'
+    import '../style/app.scss';
 </script>
 <svelte:head>
     <title>Asteriski 53v</title>

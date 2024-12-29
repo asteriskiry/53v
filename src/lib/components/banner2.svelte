@@ -1,5 +1,5 @@
 <script>
-    import logo from "$lib/assets/vuju_logo.png";
+    import logo from "$lib/assets/vujulogo.svg";
     export let lang = 'fi';
     export let links = [
         { text: "Ohjelma", href: "#program" },
@@ -41,6 +41,11 @@
     <div class="flowers right"></div>
     <div class="corner right"></div>
     <div class="wrap">
+        <div class="lang-link">
+            <a class="{lang === 'fi' ? 'bold' : ''}" href="/tesmi">FI</a>
+            |
+            <a class="{lang !== 'fi' ? 'bold' : ''}" href="/tesmi/en">EN</a>
+        </div>
         <div class="banner">
             <div class="logo">
                 <img src="{logo}" alt="Vuosijuhlaloho">
@@ -66,6 +71,11 @@
 		<div class="nav" class:menuOpen>
 			<nav class:menuOpen>
 				<ul>
+                    <li>
+                        <a class="{lang === 'fi' ? 'bold' : ''}" href="/tesmi">FI</a>
+                        |
+                        <a class="{lang !== 'fi' ? 'bold' : ''}" href="/tesmi/en">EN</a>
+                    </li>
 					{#each links as link}
 						<li><a href={link.href}>{link.text}</a></li>
 					{/each}
@@ -79,8 +89,9 @@
     @use '../../style/variables' as v;
     #banner {
         padding: 100px 0;
-        background: linear-gradient(0deg, v.$background-color, v.$background-color2 80%) no-repeat;
+        background: linear-gradient(0deg, v.$background-banner-yellow, v.$background-banner-green 80%) no-repeat;
         height: 100vh;
+        max-height: 1000px;
         position: relative;
         overflow: hidden;
     }
@@ -95,6 +106,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        max-height: 750px;
     }
 
     .top {
@@ -145,6 +157,7 @@
     }
 
     .logo {
+        max-width: 500px;
         img {
             width: 100%;
         }
@@ -158,10 +171,9 @@
     .nav-links a {
         font-family: "Meow Script", cursive;
         font-size: v.$font-size-heading2;
-        color: white;
+        color: black;
         font-weight: 400;
-        text-shadow: 2px 2px 1px black;
-        -webkit-text-stroke: 0.5px black;
+        text-shadow: 1px 1px 1px black;
         letter-spacing: 3px;
         position: absolute;
         text-decoration: none;
@@ -174,14 +186,23 @@
     /* Position links in a circle */
     .nav-links a:nth-child(1) { top: 22%; left: 38%; }
     .nav-links a:nth-child(2) { top: 22%; left: 62%; }
-    .nav-links a:nth-child(3) { top: 44%; left: 72%; }
+    .nav-links a:nth-child(3) { top: 44%; left: 73%; }
     .nav-links a:nth-child(4) { top: 65%; left: 75%; }
-    .nav-links a:nth-child(5) { top: 86%; left: 69%; }
+    .nav-links a:nth-child(5) { top: 86%; left: 73%; }
     .nav-links a:nth-child(6) { top: 100%; left: 50%; }
-    .nav-links a:nth-child(7) { top: 86%; left: 31%; }
-    .nav-links a:nth-child(8) { top: 65%; left: 23%; }
-    .nav-links a:nth-child(9) { top: 44%; left: 23%; }
+    .nav-links a:nth-child(7) { top: 86%; left: 27%; }
+    .nav-links a:nth-child(8) { top: 65%; left: 25%; }
+    .nav-links a:nth-child(9) { top: 44%; left: 27%; }
 
+    .lang-link {
+        position: absolute;
+        top: 27%;
+        right: 9%;
+        z-index: 10;
+        a {
+            text-decoration: none;
+        }
+    }
     .mobile-nav {
 		.nav {
 			display: none;
@@ -199,7 +220,7 @@
 					right: 0;
 					height: 100vh;
 					z-index: 1000;
-                    background: linear-gradient(-90deg, v.$background-color, v.$background-color2 200%) no-repeat;
+                    background: linear-gradient(-90deg, v.$background-banner-yellow, v.$background-banner-green 200%) no-repeat;
 					ul {
 						padding-top: 70px;
 						display: flex;
@@ -261,32 +282,38 @@
 		}
 	}
 
-    @include v.xl {
-        .nav-links a:nth-child(1) { top: 22%; left: 35%; }
-        .nav-links a:nth-child(2) { top: 22%; left: 65%; }
+    @media (max-width: 1800px) {
         .nav-links a:nth-child(3) { top: 44%; left: 80%; }
         .nav-links a:nth-child(4) { top: 65%; left: 84%; }
-        .nav-links a:nth-child(5) { top: 86%; left: 75%; }
-        .nav-links a:nth-child(6) { top: 100%; left: 50%; }
-        .nav-links a:nth-child(7) { top: 86%; left: 25%; }
+        .nav-links a:nth-child(5) { top: 86%; left: 80%; }
+        .nav-links a:nth-child(7) { top: 86%; left: 20%; }
         .nav-links a:nth-child(8) { top: 65%; left: 16%; }
-        .nav-links a:nth-child(9) { top: 44%; left: 16%; }
+        .nav-links a:nth-child(9) { top: 44%; left: 20%; }
+    }
+    @media (max-width: 1400px) {
+        .nav-links a:nth-child(3) { top: 44%; left: 83%; }
+        .nav-links a:nth-child(4) { top: 65%; left: 85%; }
+        .nav-links a:nth-child(5) { top: 86%; left: 83%; }
+        .nav-links a:nth-child(7) { top: 86%; left: 17%; }
+        .nav-links a:nth-child(8) { top: 65%; left: 15%; }
+        .nav-links a:nth-child(9) { top: 44%; left: 17%; }
+        .lang-link {
+            top: 25%;
+            right: 16%;
+        }
     }
     
     @include v.lg {
-        .nav-links a:nth-child(1) { top: 22%; left: 30%; }
-        .nav-links a:nth-child(2) { top: 22%; left: 65%; }
-        .nav-links a:nth-child(3) { top: 44%; left: 85%; }
+        .nav-links a:nth-child(3) { top: 44%; left: 92%; }
         .nav-links a:nth-child(4) { top: 65%; left: 92%; }
-        .nav-links a:nth-child(5) { top: 86%; left: 80%; }
-        .nav-links a:nth-child(6) { top: 100%; left: 50%; }
-        .nav-links a:nth-child(7) { top: 86%; left: 20%; }
-        .nav-links a:nth-child(8) { top: 65%; left: 10%; }
-        .nav-links a:nth-child(9) { top: 44%; left: 10%; }
+        .nav-links a:nth-child(5) { top: 86%; left: 92%; }
+        .nav-links a:nth-child(7) { top: 86%; left: 8%; }
+        .nav-links a:nth-child(8) { top: 65%; left: 8%; }
+        .nav-links a:nth-child(9) { top: 44%; left: 8%; }
     }
 
     @include v.ml {
-        .nav-links {
+        .nav-links, .lang-link {
             display: none;
         }
 

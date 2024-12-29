@@ -13,7 +13,7 @@
                     <h4>Alkuruoka</h4>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
                 {:else}
-                    <h4>Alkuruoka</h4>
+                    <h4>Starter</h4>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
                 {/if}
                 </div>
@@ -31,7 +31,14 @@
                     <h5>Vegaani</h5>
                     <p><b>Melanzane</b> <br> maalaisleipää, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
                 {:else}
-                    <h4>Alkuruoka</h4>
+                    <h4>Main Course</h4>
+                    <h5>Meat</h5>
+                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+
+                    <h5>Fish</h5>
+                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+
+                    <h5>Vegan</h5>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
                 {/if}
                 </div>
@@ -42,7 +49,7 @@
                     <h4>Jälkiruoka</h4>
                     <p><b>Ananas-passionsuklaakakkua</b> <br> kahvi/tee</p>
                 {:else}
-                    <h4>Alkuruoka</h4>
+                    <h4>Dessert</h4>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
                 {/if}
                 </div>

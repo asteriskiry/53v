@@ -1,8 +1,8 @@
 <script>
-
+    export let lang = 'fi';
 </script>
 <div class="scroller">
-    <a href="/tesmi">></a>
+    <a href="{lang === 'fi' ? '/tesmi' : '/tesmi/en'}">></a>
 </div>
 <div class="footer wrap">
     <div class="flex">
