@@ -254,7 +254,6 @@
                 font-size: 12px;
             }
             span {
-                filter: drop-shadow(0 1mm 5mm #000);
                 vertical-align: bottom;
                 cursor: pointer;
             }
@@ -333,6 +332,11 @@
         color: v.$riski-green-light
     }
 
+    h2 {
+        @include v.sm {
+            font-size: 45px;
+        }
+    }
     table {
         margin: 50px 0;
         width:100%;
@@ -351,10 +355,9 @@
         }
     }
     td {
-        padding:15px 0;
+        padding: 15px 5px;
         margin-right:auto;
         margin-left:auto;
         text-align: center;
-        
     }
 </style>
