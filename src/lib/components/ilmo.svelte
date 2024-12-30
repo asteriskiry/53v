@@ -4,6 +4,7 @@
     export let form;
     export let invited = false
     export let lang = 'fi';
+    export let data;
 </script>
 
-<Ilmoformi {invited} {id} {form} fi={lang === 'fi'} />
+<Ilmoformi {invited} {id} {form} fi={lang === 'fi'} {data}/>

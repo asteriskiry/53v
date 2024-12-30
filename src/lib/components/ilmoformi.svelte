@@ -4,35 +4,37 @@
     export let id = 'ilmo';
     export let form;
     export let fi = true;
+    export let data;
+    const participants = data.participants;
+
     let is_greeting = 'yes';
 
 </script>
 <section id="{id}">
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
-        <h2>Ilmoittautuminen</h2>
+        <h2>{fi ? 'Ilmoittautuminen' : 'Sign up'}</h2>
         {#if form?.success !== true}
-        <form method="POST" use:enhance>
+        <form method="POST" class="{form?.fields === true ? 'error' : ''}" use:enhance>
             <div class="flex-item twelve row">
                 <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
-                <a href="{fi ? '/tesmi/participants' : '/tesmi/en/participants'}">{fi ? 'Ilmoittautuneet' : 'Registered'}</a>
             </div>
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Etunimi' : 'First name'}*</span>
-                    <input type="text" name="first_name" required>
+                    <input class="required" type="text" name="first_name" required>
                 </label>
             </div>
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Sukunimi' : 'Last name'}*</span>
-                    <input type="text" name="last_name" required>
+                    <input class="required" type="text" name="last_name" required>
                 </label>
             </div>
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Sähköposti' : 'Email'}*</span>
-                    <input type="email" name="email" required>
+                    <input class="required" type="email" name="email" required>
                 </label>
             </div>
             <div class="flex-item six">
@@ -105,7 +107,7 @@
             </div>
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Avecin nimi (HUOM! Avecing on ilmoittauduttava erikseen)' : 'Avecs name (NOTE! Avecs need to register separately)'}</span>
+                    <span>{fi ? 'Avecin nimi (HUOM! Avecin on ilmoittauduttava erikseen)' : 'Avecs name (NOTE! Avecs need to register separately)'}</span>
                     <input type="text" name="avecs_name">
                 </label>
             </div>
@@ -146,13 +148,13 @@
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Tervehdyksessä edustamasi taho(t)' : 'The entity you represent when greeting'}*</span>
-                    <input type="text" name="party_representing" required>
+                    <input class="required" type="text" name="party_representing" required>
                 </label>
             </div>
         {/if}
     {/if}
         <div class="flex-item six">
-            <label class="flex-row">
+            <label class="flex-row required">
                 <input type="checkbox" name="is_consenting" required>
                 <span>{fi 
                     ? 'Hyväksyn, että tietojani käytetään vuosijuhlien järjestämiseen. Tiedot poistetaan vuosijuhlien jälkeen.'
@@ -163,17 +165,17 @@
         <div class="flex-item six row">
         {#if form?.success === false}
             {#if form?.ilmo === false}
-            <p class="bold">{fi
+            <p class="bold red">{fi
                 ?'Ilmoittautuminen ei ole auki!'
                 : 'Registration is not open!'}
             </p>
             {:else if form?.fields === true}
-            <p class="bold">{fi
+            <p class="bold red">{fi
                 ?'Täytä pakolliset kentät (*)'
                 : 'Fill mandatory fields (*)'}
             </p>
             {:else}
-            <p class="bold">{fi
+            <p class="bold red">{fi
                 ?'Jotain meni pieleen. Yritä hetken kuluttua uudelleen.'
                 : 'Something went wrong. Please try again later.'}
             </p>
@@ -189,12 +191,32 @@
                 : 'Thanks you for registration'}
             </h3>
             <a href="{invited ? (fi ? '/tesmi/kutsuvieras-ilmo' : '/tesmi/en/kutsuvieras-ilmo') : (fi ? '/tesmi/ilmo' : '/tesmi/en/ilmo')}">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
-            <a href="{fi ? '/tesmi/participants' : '/tesmi/en/participants'}">{fi ? 'Katso ilmoittautuneet' : 'See registered'}</a>
             <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
         </div>
         
         {/if}
     </div>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>{fi ? 'Ilmoittautuneet' : 'Registered'}</th>
+        </tr>
+    {#if form?.participants?.fitting_participants} 
+        {#each form.participants.fitting_participants as p}
+            <tr>
+                <td>{p.id}</td>
+                <td>{p.first_name} {p.last_name}</td>
+            </tr>    
+        {/each}
+    {:else}
+        {#each participants.fitting_participants as p}
+        <tr>
+            <td>{p.id}</td>
+            <td>{p.first_name} {p.last_name}</td>
+        </tr>    
+        {/each}
+    {/if}
+    </table>
 </div>
 </section>
 <style lang="scss">
@@ -204,6 +226,10 @@
         form {
             width: 50%;
             margin: 0 auto;
+            &.error .required {
+                border: 2px solid red;
+                border-radius: 5px;
+            }
             @include v.lg {
                 width: 80%;
             }
@@ -297,5 +323,38 @@
         a {
             margin: 5px 0;
         }
+    }
+
+    .red {
+        color: red;
+    }
+
+    a {
+        color: v.$riski-green-light
+    }
+
+    table {
+        margin: 50px 0;
+        width:100%;
+        border-spacing: 0;
+    }
+
+    th {
+        background:v.$font-gold;
+        padding: 10px 0;
+        margin-right:auto;
+	    
+    }
+    tr {
+        &:nth-of-type(even) {
+            background: #f1dfdf;
+        }
+    }
+    td {
+        padding:15px 0;
+        margin-right:auto;
+        margin-left:auto;
+        text-align: center;
+        
     }
 </style>

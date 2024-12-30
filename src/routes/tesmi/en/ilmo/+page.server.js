@@ -57,9 +57,19 @@ export const actions = {
         const res = await response.json();
 
         if (response.ok) {
-            return { 
-                success: true,
-            };
+            const apiResponse = await fetch('https://api.viiskyt.asteriski.fi/api/participants/');
+            let participants = [];
+            if (apiResponse.ok) {
+                participants = await apiResponse.json();
+                return { 
+                    success: true,
+                    participants
+                };
+            } else {
+                return {
+                    success: true
+                }
+            }
         }
         if (res?.non_field_errors && Array.isArray(res.non_field_errors) && res?.non_field_errors[0] === 'Ilmoittautuminen ei ole auki') {
             return fail(400, { 

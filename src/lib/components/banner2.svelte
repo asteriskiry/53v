@@ -178,6 +178,7 @@
         position: absolute;
         text-decoration: none;
         transform: translate(-50%, -50%);
+        z-index: 10;
         &:hover {
             transform: translate(-50%, -50%) scale(1.1);
         }

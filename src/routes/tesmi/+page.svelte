@@ -5,6 +5,7 @@
     import Footer from "$lib/components/footer.svelte";
     import Posts from "$lib/components/posts.svelte";
     import Menu from "$lib/components/menu.svelte";
+    import Sillis from "$lib/components/sillis.svelte";
     import Logofarm from "$lib/components/logofarm.svelte";
     import infoImg from "$lib/assets/vuju.jpg"
     export let data;
@@ -56,5 +57,6 @@
 <Posts posts={data.posts}/>
 <Menu/>
 <Program title={etiquetteTitle} texts={etiquette} id={'etiquette'}/>
+<Sillis />
 <Logofarm />
 <Footer/>

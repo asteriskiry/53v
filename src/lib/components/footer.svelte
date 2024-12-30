@@ -1,8 +1,9 @@
 <script>
     export let lang = 'fi';
+    import { page } from '$app/stores';
 </script>
 <div class="scroller">
-    <a href="{lang === 'fi' ? '/tesmi' : '/tesmi/en'}">></a>
+    <a href="{$page.url.pathname}">></a>
 </div>
 <div class="footer wrap">
     <div class="flex">
