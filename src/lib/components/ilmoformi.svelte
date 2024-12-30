@@ -38,7 +38,7 @@
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Opintojen aloitusvuosi' : 'Starting year of studies'}</span>
-                    <input type="number" name="starting_year">
+                    <input type="number" name="starting_year" min="1950" max="2025">
                 </label>
             </div>
             <div class="flex-item six">
@@ -105,7 +105,7 @@
             </div>
             <div class="flex-item six">
                 <label>
-                    <span>{fi ? 'Avecin nimi (HUOM! Avecing on ilmoittauduttava erikseen)' : '(NOTE! Avecs need to register separately)'}</span>
+                    <span>{fi ? 'Avecin nimi (HUOM! Avecing on ilmoittauduttava erikseen)' : 'Avecs name (NOTE! Avecs need to register separately)'}</span>
                     <input type="text" name="avecs_name">
                 </label>
             </div>
@@ -166,6 +166,11 @@
             <p class="bold">{fi
                 ?'Ilmoittautuminen ei ole auki!'
                 : 'Registration is not open!'}
+            </p>
+            {:else if form?.fields === true}
+            <p class="bold">{fi
+                ?'Täytä pakolliset kentät (*)'
+                : 'Fill mandatory fields (*)'}
             </p>
             {:else}
             <p class="bold">{fi
