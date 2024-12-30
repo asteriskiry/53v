@@ -63,7 +63,18 @@
     @include v.sm {
         .flex-item.four {
             width: 100%;
-        } 
+        }
+        a {
+            img {
+                filter: unset;
+                -webkit-filter: unset;
+                &:hover {
+                    filter: unset;
+                    transform: unset;
+                    -webkit-filter: unset;
+                }
+            }
+        }
     } 
     
 </style>

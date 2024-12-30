@@ -345,6 +345,16 @@
         #banner {
             padding: 50px 0;
         }
+        .mobile-nav {
+            .menu-toggle {
+                top: 25px;
+            }
+            .nav {
+                nav.menuOpen {
+                    width: 60%;
+                }
+            }
+        }
     }
     @media (max-height: 650px) {
         .mobile-nav .menu-toggle {
