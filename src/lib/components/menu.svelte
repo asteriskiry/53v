@@ -24,21 +24,15 @@
                     <h4>Pääruoka</h4>
                     <h5>Liha</h5>
                     <p><b>Ylikypsää naudan rintaa ja punaviinikastiketta</b> <br> paahdetut pikkuperunat, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
-            
-                    <h5>Kala</h5>
-                    <p><b>Veriappelsiinilohta ja sitruskastiketta</b> <br> paahdetut pikkuperunat, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
 
-                    <h5>Vegaani</h5>
+                    <h5>Kasvis</h5>
                     <p><b>Melanzane</b> <br> maalaisleipää, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
                 {:else}
                     <h4>Main Course</h4>
                     <h5>Meat</h5>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
 
-                    <h5>Fish</h5>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
-
-                    <h5>Vegan</h5>
+                    <h5>Vegetarian</h5>
                     <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
                 {/if}
                 </div>

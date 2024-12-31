@@ -5,7 +5,7 @@
     export let form;
     export let fi = true;
     export let data;
-    const participants = data.participants;
+    const participants = data?.participants;
 
     let is_greeting = 'yes';
 
@@ -78,11 +78,7 @@
                     </label>
                     <label>
                         <input type="radio" name="menu" value="VG">
-                        <span>{fi ? 'Vegaani' : 'Vegan'}</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="menu" value="KA">
-                        <span>{fi ? 'Kala' : 'Fish'}</span>
+                        <span>{fi ? 'Kasvis' : 'Vegetarian'}</span>
                     </label>
                 </div>
             </div>
@@ -208,7 +204,7 @@
                 <td>{p.first_name} {p.last_name}</td>
             </tr>    
         {/each}
-    {:else}
+    {:else if participants?.fitting_participants}
         {#each participants.fitting_participants as p}
         <tr>
             <td>{p.id}</td>
