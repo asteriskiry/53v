@@ -29,8 +29,7 @@ body {
         font-size: v.$font-size-heading2;
         color: white;
         font-weight: 400;
-        text-shadow: 2px 2px 1px black;
-        -webkit-text-stroke: 0.5px black;
+        text-shadow: 1px 1px 1px black, -1px -1px 1px black, 2px 2px 1px black;
         letter-spacing: 3px;
     }
     h1,h2 {
