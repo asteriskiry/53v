@@ -100,15 +100,16 @@
                 <div class="flex-item six has-text {text.imgs ? '' : 'no-imgs'}">
                     <h3>{lang === 'fi' ? text.fi.left[0] : text.en.left[0]}</h3>
                     <p>
-                        {lang === 'fi' ? text.fi.left[1] : text.en.left[1]
-                        }
+                        {lang === 'fi' ? text.fi.left[1] : text.en.left[1]}
                     </p>
                 </div>
                 {#if text.imgs}
                 <div class="flex-item four has-sponsors">
+                    {#if text[lang]?.right}
                     <h3>
-                        {lang === 'fi' ? text.fi.right : text.en.right}
+                        {text[lang].right}
                     </h3>
+                    {/if}
                     <div class="sponsors flex">
                         {#each text?.imgs as img}
                         <div class="flex-item six">
@@ -147,6 +148,8 @@
 
     .has-sponsors {
         margin-left: auto;
+        display: flex;
+        flex-direction: column;
         h3 {
           text-align: center;  
         }
@@ -163,6 +166,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        flex: 1;
         @include v.ml {
             align-items: flex-start;
         }
@@ -172,6 +176,9 @@
                 width: 100%;
                 &:last-of-type {
                     margin-top: 10px
+                }
+                &:first-of-type {
+                    margin-top: 0px
                 }
             }
             a {

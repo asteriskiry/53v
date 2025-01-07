@@ -8,6 +8,7 @@
     import Sillis from "$lib/components/sillis.svelte";
     import Logofarm from "$lib/components/logofarm.svelte";
     import infoImg from "$lib/assets/vuju.jpg"
+    import reaktor from "$lib/assets/reaktor.svg";
     export let data;
 
     let etiquette = [
@@ -50,6 +51,27 @@
         fi: 'Etiketti',
         en: 'Etiquette'
     };
+
+    let sponsorIntroduction = [
+        {
+            fi: {
+                left: [
+                    'Reaktor', 
+                    "Reaktor on kansainvälisesti arvostettu teknologiayritys, joka suunnittelee ja rakentaa huippuluokan digitaalisia tuotteita ja palveluita yhteistyössä maailman johtavien brändien kanssa.\n\nVuonna 2000 perustettu yritys tunnetaan tinkimättömästä laadusta, luovasta ongelmanratkaisusta ja syvällisestä teknologiaymmärryksestä. Reaktorilla on yli 700 asiantuntijaa, jotka työskentelevät kahdeksassa toimistossa ympäri maailmaa – Helsingissä, Turussa, Tampereella, New Yorkissa, Amsterdamissa, Lissabonissa, Tukholmassa ja Tokiossa. Asiakaskuntaan kuuluu ikonisia nimiä, kuten Adidas, HBO, Supercell, Cathay Pacific ja KONE, joiden kanssa Reaktor on luonut uraauurtavia ratkaisuja ja monia \"maailman ensimmäisiä\".\n\nReaktorilla osaajat eivät pelkästään seuraa teknologian kehitystä, vaan aktiivisesti rakentavat sen tulevaisuutta."
+                ],
+                right: ''
+            },
+            en: {
+                left: [
+                    'Sponsor introduction',
+                ],
+                right: ''
+            },
+            imgs: [
+                {href:'https://www.reaktor.com/', src: reaktor, alt: 'Reaktor logo'}
+            ]
+        },
+    ];
 </script>
 <Banner/>
 <Program/>
@@ -58,5 +80,6 @@
 <Menu/>
 <Program title={etiquetteTitle} texts={etiquette} id={'etiquette'}/>
 <Sillis />
+<Program title={{fi: 'Yritysesittely'}} texts={sponsorIntroduction} id={'sponsor-introduction'} />
 <Logofarm />
 <Footer/>
