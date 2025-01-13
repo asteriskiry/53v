@@ -205,16 +205,16 @@
             <th>{fi ? 'Ilmoittautuneet' : 'Registered'}</th>
         </tr>
     {#if form?.participants?.fitting_participants} 
-        {#each form.participants.fitting_participants as p}
+        {#each form.participants.fitting_participants as p, i}
             <tr>
-                <td>{p.id}</td>
+                <td>{i + 1}</td>
                 <td>{p.first_name} {p.last_name}</td>
             </tr>    
         {/each}
     {:else if participants?.fitting_participants}
-        {#each participants.fitting_participants as p}
+        {#each participants.fitting_participants as p, i}
         <tr>
-            <td>{p.id}</td>
+            <td>{i + 1}</td>
             <td>{p.first_name} {p.last_name}</td>
         </tr>    
         {/each}
