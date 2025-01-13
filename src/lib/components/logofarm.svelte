@@ -4,11 +4,12 @@
     import reaktor from "$lib/assets/reaktor.svg";
     import oikia from "$lib/assets/oikia.png";
     export let id = 'sponsors';
+    export let lang = 'fi';
 </script>
 
 <section id="{id}" class="sponsors">
     <div class="wrap">
-        <h2>Sponsorit</h2>
+        <h2>{lang === 'fi' ? 'Sponsorit' : 'Sponsors'}</h2>
         <div class="flex">
             <div class="flex-item four">
                 <a rel="noreferrer" href="https://www.mankelisolutions.fi/" target="_blank">

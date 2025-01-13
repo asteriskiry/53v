@@ -13,13 +13,14 @@
             fi: {
                 left: [
                     'Cocktail-tilaisuus', 
-                    'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Turun yliopiston päärakennuksessa (Henrikinkatu 2, 20500 Turku) kello 14.30 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja, cocktailpalat sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Kaikki vuosijuhlaosallistujat ovat tervetulleita seuraamaan tilaisuutta. Cocktail-tilaisuudesta lähtee kuljetukset itse pääjuhlaan klo 17.00 osoitteesta Naturankuja. Voit myös saapua suoraan pääjuhlaan.'],
+                    'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Akatemiatalolla Konsistorin salissa (Rothoviuksenkatu 1, 20500 Turku) kello 16.00 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja, cocktailpalat sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Cocktail-tilaisuudesta kuljetukset alakertaan tulee järjestää itse.'
+                ],
                 right: 'Cocktail-tilaisuudessa mukana:'
             },
             en: {
                 left: [
                     'Cocktail party', 
-                    'text'
+                    ''
                 ],
                 right: 'Cocktail party sponsor:'
             },
@@ -31,14 +32,14 @@
             fi: {
                 left: [
                     'Pääjuhla',
-                    'Asteriskin 50-vuotisjuhlien pääjuhlaa vietetään Turun VPK:n talolla (Eskelinkatu 5, 20100 Turku). Ovet tilaisuuteen avataan klo 17.00 ja itse pääjuhla alkaa klo 18:00. Juhlassa kunnioitamme rakasta ainejärjestöämme puhein ja tervehdyksin. Lisäksi nautimme kolmen ruokalajin illallisen ja jaamme tunnustuksia henkilöille, jotka ovat olleet vuosien varrella mukana rakentamasta Asteriskista sellaisen kuin se tänä päivänä on. Pääjuhlan päätyttyä tanssitaan akateemiset tanssit.'
+                    'Asteriskin 53-vuotisjuhlien pääjuhlaa vietetään Akatemiatalon juhlasalissa (Rothoviuksenkatu 1, 20500 Turku). Ovet tilaisuuteen avataan klo 17:30 ja itse pääjuhla alkaa klo 18:00. Juhlassa kunnioitamme rakasta ainejärjestöämme puhein ja tervehdyksin. Lisäksi nautimme kolmen ruokalajin illallisen ja jaamme tunnustuksia henkilöille, jotka ovat olleet vuosien varrella mukana rakentamasta Asteriskista sellaisen kuin se tänä päivänä on. Pääjuhlan päätyttyä tanssitaan akateemiset tanssit.'
                 ],
                 right: 'Pääjuhlassa mukana:'
             },
             en: {
                 left: [
                     'Main event', 
-                    'text'
+                    ''
                 ],
                 right: 'Main event sponsor:'
             },
@@ -57,34 +58,26 @@
             en: {
                 left: [
                     'After party', 
-                    'text'
+                    ''
                 ],
                 right: 'After party sponsor:'
             },
-            imgs: [
-                {href:'', src: logo, alt: 'logo'},
-                {href:'', src: logo, alt: 'logo'}
-            ]
         },
         {
             fi: {
                 left: [
                     'Sillis',
-                    'Meininki ei suinkaan lopu pääjuhlan ja jatkojen jälkeen, vaan lauantaina 8.3. koittaa taikametsäteemainen silliaamiainen! Silliksellä on tarjolla ruokaa, naposteltavaa sekä juomista. Kaiken tämän lisäksi sauna (ja palju) on kuumana, joten nappaa mukaasi myös uimapuku, pyyhe ja peseytymisvermeet. Huom. uimapuku on sauna- ja pesutiloissa pakollinen! Sillikselle voit pukeutua halutessasi teeman mukaan tai rentoihin vaatteisiin, esimerkiksi haalareihin. \n\nSillikselle on yhteiskuljetukset. Bussit lähtevät lauantaina 8.3. klo 12.00 ja xx.xx. Proffan kellarin edestä. Olethan ajoissa paikalla, sillä bussit eivät odota! Kuljetukset takaisin sillikseltä Proffaan ovat perillä noin klo 19.45 ja xx.xx.'
+                    'Meininki ei suinkaan lopu pääjuhlan ja jatkojen jälkeen, vaan lauantaina 8.3. koittaa taikametsäteemainen silliaamiainen! Silliksellä on tarjolla ruokaa, naposteltavaa sekä juomista. Kaiken tämän lisäksi sauna (ja palju) on kuumana, joten nappaa mukaasi myös uimapuku, pyyhe ja peseytymisvermeet. Huom. uimapuku on sauna- ja pesutiloissa pakollinen! Sillikselle voit pukeutua halutessasi teeman mukaan tai rentoihin vaatteisiin, esimerkiksi haalareihin. \n\nSillikselle on yhteiskuljetukset. Bussit lähtevät lauantaina 8.3. klo 12.00 ja 12.45. Proffan kellarin edestä. Olethan ajoissa paikalla, sillä bussit eivät odota! Kuljetukset takaisin sillikseltä Proffaan ovat perillä noin klo 19.45 ja 20.30.'
                 ],
                 right: 'Silliksellä mukana:'
             },
             en: {
                 left: [
                     'Herring Breakfast', 
-                    'text'
+                    ''
                 ],
                 right: 'Herring Breakfast sponsor:'
             },
-            imgs: [
-                {href:'', src: logo, alt: 'logo'},
-                {href:'', src: logo, alt: 'logo'}
-            ]
         },
     ];
 </script>

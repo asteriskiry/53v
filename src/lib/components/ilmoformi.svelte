@@ -14,6 +14,7 @@
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>{fi ? 'Ilmoittautuminen' : 'Sign up'}</h2>
+    {#if invited || (new Date().getTime() > new Date('2025-01-28'))}
         {#if form?.success !== true}
         <form method="POST" class="{form?.fields === true ? 'error' : ''}" use:enhance>
             <div class="flex-item twelve row">
@@ -187,11 +188,16 @@
                 ? 'Kiitos ilmoittautumisesta!'
                 : 'Thanks you for registration'}
             </h3>
-            <a href="{invited ? (fi ? '/tesmi/kutsuvieras-ilmo' : '/tesmi/en/kutsuvieras-ilmo') : (fi ? '/tesmi/ilmo' : '/tesmi/en/ilmo')}">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
+            <a href="{invited ? (fi ? '/kutsuvieras-ilmo' : '/en/kutsuvieras-ilmo') : (fi ? '/ilmo' : '/en/ilmo')}">{fi ? 'Tee toinen ilmoittautuminen' : 'Register again'}</a>
             <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
         </div>
-        
         {/if}
+    {:else}
+        <div class="flex-item six thanks">
+            <p>Ilmoittautuminen aukeaa 28.1.</p>
+            <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
+        </div>
+    {/if}
     </div>
     <table id="registered">
         <tr>

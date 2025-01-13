@@ -66,11 +66,11 @@
     const lang = 'en';
 </script>
 <Banner {lang} {links}/>
-<Program {lang}/>
+
 <Info {lang} mask={true} img={infoImg}/>
 <Posts {lang} posts={data.posts}/>
 <Menu {lang}/>
 <Program {lang} title={etiquetteTitle} texts={etiquette} id={'etiquette'}/>
 
-<Logofarm />
+<Logofarm {lang}/>
 <Footer {lang}/>

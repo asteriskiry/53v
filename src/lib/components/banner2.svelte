@@ -7,10 +7,10 @@
         { text: "Sillis", href: "#sillis" },
         { text: "Uutiset", href: "#news" },
         { text: "Menu", href: "#menu" },
+        { text: "Ilmo", href: "/ilmo" },
         { text: "Sponsorit", href: "#sponsors" },
-        { text: "Ilmo", href: "tesmi/ilmo" },
         { text: "Etiketti", href: "#etiquette" },
-        { text: "Tarjoukset", href: "#offers" },
+        
     ];
     let x = 0;
     let menuOpen = false;
@@ -42,9 +42,9 @@
     <div class="corner right"></div>
     <div class="wrap">
         <div class="lang-link">
-            <a class="{lang === 'fi' ? 'bold' : ''}" href="/tesmi">FI</a>
+            <a class="{lang === 'fi' ? 'bold' : ''}" href=".">FI</a>
             |
-            <a class="{lang !== 'fi' ? 'bold' : ''}" href="/tesmi/en">EN</a>
+            <a class="{lang !== 'fi' ? 'bold' : ''}" href="./en">EN</a>
         </div>
         <div class="banner">
             <div class="logo">
@@ -72,9 +72,9 @@
 			<nav class:menuOpen>
 				<ul>
                     <li>
-                        <a class="{lang === 'fi' ? 'bold' : ''}" href="/tesmi">FI</a>
+                        <a class="{lang === 'fi' ? 'bold' : ''}" href=".">FI</a>
                         |
-                        <a class="{lang !== 'fi' ? 'bold' : ''}" href="/tesmi/en">EN</a>
+                        <a class="{lang !== 'fi' ? 'bold' : ''}" href="/en">EN</a>
                     </li>
 					{#each links as link}
 						<li><a href={link.href}>{link.text}</a></li>
