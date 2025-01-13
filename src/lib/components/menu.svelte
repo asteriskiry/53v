@@ -11,10 +11,18 @@
                 <div class="flex flex-column flex-item six center">
                 {#if lang === 'fi'}
                     <h4>Alkuruoka</h4>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+                    <h5>Liha</h5>
+                    <p><b>Jääkellarin lohta</b> <br> marinoitua perunaa, siianmätiä, ja "hovimestarin majoneesia" (L,G)</p>
+
+                    <h5>Kasvis</h5>
+                    <p><b>Paahdettuja punajuuria</b> <br> vuohenjuustomoussea, vadelma-punajuuripyrettä ja maa-artisokkaa (L,G)</p>
                 {:else}
                     <h4>Starter</h4>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+                    <h5>Meat</h5>
+                    <p><b>Ice cellar salmon</b> <br> marinated potatoes, whitefish roe, and "butler's mayonnaise" (L,G)</p>
+
+                    <h5>Vegetarian</h5>
+                    <p><b>Roasted beets</b> <br> goat cheese mousse, raspberry-beetroot puree and Jerusalem artichoke (L,G)</p>
                 {/if}
                 </div>
             </div>
@@ -23,17 +31,17 @@
                 {#if lang === 'fi'}
                     <h4>Pääruoka</h4>
                     <h5>Liha</h5>
-                    <p><b>Ylikypsää naudan rintaa ja punaviinikastiketta</b> <br> paahdetut pikkuperunat, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
+                    <p><b>Ylikypsää karitsan entrecotea</b> <br> selleripyrettä, perunafondattia, pikkelöityä siitaketta ja tummaa rosmariinikastiketta (L,G)</p>
 
                     <h5>Kasvis</h5>
-                    <p><b>Melanzane</b> <br> maalaisleipää, uunijuurekset, pikkelöidyt sinapinsiemenet, kasvissipsit</p>
+                    <p><b>Vihreä Thaicurry</b> <br> bataattia, edamamepapuja, luomu tofua ja friteerattua riisiä (V,G)</p>
                 {:else}
                     <h4>Main Course</h4>
                     <h5>Meat</h5>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+                    <p><b>Overcooked lamb entrecote</b> <br> celery puree, potato fondant, pickled shiitake mushrooms and dark rosemary sauce (L,G)</p>
 
                     <h5>Vegetarian</h5>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+                    <p><b>Green Thai curry</b> <br> sweet potato, edamame beans, organic tofu and fried rice (V,G)</p>
                 {/if}
                 </div>
             </div>
@@ -41,10 +49,10 @@
                 <div class="flex flex-column flex-item six center">
                 {#if lang === 'fi'}
                     <h4>Jälkiruoka</h4>
-                    <p><b>Ananas-passionsuklaakakkua</b> <br> kahvi/tee</p>
+                    <p><b>Tuulihattu</b> <br> suolakinuskia, omenaa, kaneli-crumblea ja mascarponemoussea (L)</p>
                 {:else}
                     <h4>Dessert</h4>
-                    <p><b>Maa-artisokkakeitto</b> <br> yrttiöljyä, saaristolaisleipää, valkosipulilevite</p>
+                    <p><b>Cream puff</b> <br> salted caramel, apple, cinnamon crumble and mascarpone mousse (L)</p>
                 {/if}
                 </div>
             </div>

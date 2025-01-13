@@ -2,6 +2,7 @@
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     import visma from "$lib/assets/visma.svg";
     import reaktor from "$lib/assets/reaktor.svg";
+    import oikia from "$lib/assets/oikia.png";
     export let id = 'sponsors';
 </script>
 
@@ -24,6 +25,11 @@
                     <img class="img" src="{reaktor}" alt="Reaktor logo">
                 </a>
             </div>
+            <div class="flex-item four">
+                <a rel="noreferrer" href="https://www.oikiaruoka.fi/" target="_blank">
+                    <img class="img" src="{oikia}" alt="Oikia logo">
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -36,6 +42,7 @@
     }
     .flex {
         flex-wrap: wrap;
+        justify-content: center;
     }
     a {
         padding: 1rem;

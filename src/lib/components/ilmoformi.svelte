@@ -18,6 +18,7 @@
         <form method="POST" class="{form?.fields === true ? 'error' : ''}" use:enhance>
             <div class="flex-item twelve row">
                 <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
+                <a href="#registered">{fi ? 'Ilmonneet' : 'Registered'}</a>
             </div>
             <div class="flex-item six">
                 <label>
@@ -192,7 +193,7 @@
         
         {/if}
     </div>
-    <table>
+    <table id="registered">
         <tr>
             <th>#</th>
             <th>{fi ? 'Ilmoittautuneet' : 'Registered'}</th>

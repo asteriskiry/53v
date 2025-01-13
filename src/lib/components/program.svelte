@@ -50,7 +50,7 @@
             fi: {
                 left: [
                     'Jatkot',
-                    'Pääjuhlan loputtua vieraat kuljetetaan salaiseen jatkopaikkaan. Jatkoilta on bussikuljetukset takaisin keskustaan ja yliopistolle. Kuljetukset saapuvat yliopistolle noin klo 03.00 ja 04.00.'
+                    'Pääjuhlan loputtua vieraat kuljetetaan salaiseen jatkopaikkaan.'
                 ],
                 right: 'Jatkoilla mukana:'
             },
@@ -70,7 +70,7 @@
             fi: {
                 left: [
                     'Sillis',
-                    'Pääjuhlaa ja jatkoja seuraa sunnuntaina 2. lokakuuta eeppinen sirkusteemainen silliaamiainen, jota et halua missata! Silliksellä juhlakansaa odottaa maittava aamiainen sekä olotiloja tasoittavaa juomaa. Otathan sillikselle mukaan pyyhkeen sekä uima-asun saunomista varten. Yleisen viihtyvyyden vuoksi huomioithan, että pesutiloissa on uima-asu pakko! Sillikselle kuljemme yhteisellä bussikuljetuksella sunnuntaina. Bussit sillikselle lähtevät kello 11:00 ja 12:00 osoitteesta Vesilinnantie 5. Ole ajoissa paikalla sillä bussit ei odota myöhästelijöitä! Sillistä varten kannattaa varata rento asu. Kuljetukset sillikselt yliopistolle ovat perillä noin 17.30 ja 18.30.'
+                    'Meininki ei suinkaan lopu pääjuhlan ja jatkojen jälkeen, vaan lauantaina 8.3. koittaa taikametsäteemainen silliaamiainen! Silliksellä on tarjolla ruokaa, naposteltavaa sekä juomista. Kaiken tämän lisäksi sauna (ja palju) on kuumana, joten nappaa mukaasi myös uimapuku, pyyhe ja peseytymisvermeet. Huom. uimapuku on sauna- ja pesutiloissa pakollinen! Sillikselle voit pukeutua halutessasi teeman mukaan tai rentoihin vaatteisiin, esimerkiksi haalareihin. \n\nSillikselle on yhteiskuljetukset. Bussit lähtevät lauantaina 8.3. klo 12.00 ja xx.xx. Proffan kellarin edestä. Olethan ajoissa paikalla, sillä bussit eivät odota! Kuljetukset takaisin sillikseltä Proffaan ovat perillä noin klo 19.45 ja xx.xx.'
                 ],
                 right: 'Silliksellä mukana:'
             },
