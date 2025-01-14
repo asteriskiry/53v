@@ -33,7 +33,7 @@
                             
                             Silliaamiaista eli sillistä nautitaan juhlien seuraavana päivänä lauantaina 8. maaliskuuta. Jatkojen tapaan myös sillis järjestetään salaisessa paikassa.
                             
-                            Vuosijuhlat järjestetään esteettömissä tiloissa. Jatkoilla saatetaan käyttää vilkkuvia valoja.
+                            Jatkoilla saatetaan käyttää vilkkuvia valoja.
                             
                             Vuosijuhlien pukukoodina toimii juhlapuku tai tumma puku sekä akateemiset kunniamerkit. <a href="#etiquette">Lisätietoa vuosijuhlien etiketistä</a>.
                         </p>
@@ -44,7 +44,7 @@
 
                             On the following morning on Saturday 8th of March 2025 the herring breakfast will take place in a secret location.
 
-                            The annual ball is organized in accessible premises. Afterparty may include flashing lights.
+                            Afterparty may include flashing lights.
 
                             The dress code at the annual ball is a white tie or dark lounge suit for men and an evening gown for women as well as academic decorations.
                         </p>
