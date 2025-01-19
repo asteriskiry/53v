@@ -3,6 +3,7 @@
     import visma from "$lib/assets/visma.svg";
     import reaktor from "$lib/assets/reaktor.svg";
     import oikia from "$lib/assets/oikia.png";
+    import kaalimato from "$lib/assets/kaalimato.webp";
     export let id = 'sponsors';
     export let lang = 'fi';
 </script>
@@ -29,6 +30,11 @@
             <div class="flex-item four">
                 <a rel="noreferrer" href="https://www.oikiaruoka.fi/" target="_blank">
                     <img class="img" src="{oikia}" alt="Oikia logo">
+                </a>
+            </div>
+            <div class="flex-item four">
+                <a rel="noreferrer" href="https://www.kaalimato.com/" target="_blank">
+                    <img class="img" src="{kaalimato}" alt="Kaalimato logo">
                 </a>
             </div>
         </div>

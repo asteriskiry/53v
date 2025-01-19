@@ -194,7 +194,7 @@
         {/if}
     {:else}
         <div class="flex-item six thanks">
-            <p>Ilmoittautuminen aukeaa 28.1.</p>
+            <p>{fi ? 'Ilmoittautuminen aukeaa 28.1.' : 'Sign up starts 28.1.'} </p>
             <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
         </div>
     {/if}

@@ -4,13 +4,13 @@
     export let links = [
         { text: "Ohjelma", href: "#program" },
         { text: "Tietoa", href: "#info" },
-        { text: "Sillis", href: "#sillis" },
         { text: "Uutiset", href: "#news" },
         { text: "Menu", href: "#menu" },
         { text: "Ilmo", href: "/ilmo" },
-        { text: "Sponsorit", href: "#sponsors" },
         { text: "Etiketti", href: "#etiquette" },
-        
+        { text: "Tarjoukset", href: "#offers"},
+        { text: "Sillis", href: "#sillis" },
+        { text: "Sponsorit", href: "#sponsor-introduction" },
     ];
     let x = 0;
     let menuOpen = false;

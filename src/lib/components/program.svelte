@@ -106,7 +106,7 @@
                     <div class="sponsors flex">
                         {#each text?.imgs as img}
                         <div class="flex-item six">
-                            <a href={img.href}>
+                            <a href={img.href} target="_blank">
                                 <img src="{img.src}" alt="{img.alt}">
                             </a>
                         </div>
@@ -139,22 +139,6 @@
         }
     }
 
-    .has-sponsors {
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        h3 {
-          text-align: center;  
-        }
-
-        @include v.ml {
-            h3 {
-                text-align: left;
-                margin-left: 0;
-            }
-        }
-    }
-
     .sponsors {
         align-items: center;
         justify-content: center;
@@ -177,7 +161,7 @@
             a {
                 display: flex;
                 justify-content: center;
-                height: 80px;
+                height: 100px;
                 
                 img {
                     width: 100%;

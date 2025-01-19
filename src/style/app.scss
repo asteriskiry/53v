@@ -211,3 +211,19 @@ button {
     border: 15px solid v.$font-gold;
     border-radius: 20px;
 }
+
+.has-sponsors {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    h3 {
+      text-align: center;  
+    }
+
+    @include v.ml {
+        h3 {
+            text-align: left;
+            margin-left: 0;
+        }
+    }
+}

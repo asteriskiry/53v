@@ -12,7 +12,7 @@
             </div>
                 <div class="flex flex-column">
                     <div class="flex-item six has-title">
-                        <h2>{lang === 'fi' ? 'Uutiset' : 'The news'}</h2>
+                        <h2>{lang === 'fi' ? 'Uutiset' : 'News'}</h2>
                     </div>
                     {#if posts.length}            
                     {#each posts as post}

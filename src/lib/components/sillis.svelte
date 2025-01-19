@@ -9,27 +9,9 @@
                 <h2>{lang === 'fi' ? 'Sillis' : 'Herring breakfast'}</h2>
                 <p>
                 {#if lang === 'fi'}
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
+                    Jos taikametsään haluat mennä nyt, sä takuulla yllätyt!
                 {:else}
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
-                    TÄSSÄ TIETOA SILLIKSESTÄ
+                    If you want to go to the magic forest now, you're in for a surprise!
                 {/if}
                 </p>
             </div>
