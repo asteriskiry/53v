@@ -35,7 +35,7 @@ Ajanvarauksen voi hoitaa paikanpäällä, somekanavien kautta, <a href="https://
             </div>
             <div class="flex flex-item twelve">
                 <div class="flex-item six has-text">
-                    <h3>Studio Flair</h3>
+                    <h3>Academia</h3>
                     <p>
                         Hei vuosijuhliin osallistujat!
 

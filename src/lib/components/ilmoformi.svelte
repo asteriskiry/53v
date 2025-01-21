@@ -116,7 +116,7 @@
                 </label>
             </div>
             <div class="flex-item six">
-                <span>{fi ? 'Nimeni saa näkyä ilmoittautuneuiden listassa' : 'My name can be shown in the list of those who registered'}*</span>
+                <span>{fi ? 'Nimeni saa näkyä ilmoittautuneiden listassa' : 'My name can be shown in the list of those who registered'}*</span>
                 <div class="options">
                     <label>
                         <input type="radio" name="show_name" value="yes" required checked>
