@@ -4,7 +4,7 @@
     import reaktor from "$lib/assets/reaktor.svg";
     import oikia from "$lib/assets/oikia.png";
     import kaalimato from "$lib/assets/kaalimato.webp";
-    import ssk from "$lib/assets/ssk.png";
+    import ssk from "$lib/assets/SSK.png";
     export let id = 'sponsors';
     export let lang = 'fi';
 
