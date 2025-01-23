@@ -43,16 +43,14 @@ In our epic herring breakfast the dress code is much more casual. Dress accordin
                         {#if lang === 'fi'}
                         <h3>Vinkkejä käyttäytymiseen</h3>
                         <p>
-                            Pukukoodina vuosijuhlissa toimii juhlapuku sekä akateemiset kunniamerkit. Juhlapuku tarkoittaa frakkia tai täyspitkää iltapukua tai täyspitkää juhlamekkoa. Frakin voi myös korvata hillityllä tummalla puvulla. Tällöin tumman puvun kanssa on sopiva käyttää valkoista paitaa sekä vaaleaa tai helmiäistä yksiväristä solmiota. 
-
-Iltapukua tai juhlamekkoa käytettäessä vain kengän kärjet saavat näkyä. Laukkuna tulee toimia olkaimeton ja siro laukku. Pääjuhlassa lippujen läsnäollessa hartioiden tulisi myös olla peitettynä esimerkiksi hartiahuivilla. Hansikkaita voi halutessaan käyttää muuten kuin ruokaillessa. 
-
-Vuosijuhlilla käytetään akateemisiksi kunniamerkeiksi määriteltyjä nauhoja ja merkkejä, jotka kuuluvat perinteisesti vuosijuhla-asuun, kuten Asteriskin jäsennauhaa. Nauhoja ja merkkejä kannetaan ne myöntäneen tahon ohjeiden mukaan. 
-
-Eeppiselle silliaamiaiselle päälle pantavaksi kannattaa varata taikametsäteeman mukaista huomattavasti rennompaa vaatetusta. Mitä rennompi ja taikaisempi, sen parempi! Haalarit toimivat myös aina.
+                            Perinteiset hyvät käytöstavat toimivat oikein hyvin myös vuosijuhlilla. Keskustelu on suotavaa koko juhlan ajan lukuunottamatta ohjelmanumeroita sekä juhlamarsalkan ja laulunjohtajien puheita, jolloin juhlaväen tulee olla hiljaa. Juhlavieraiden ei ole suotavaa pyytää puheenvuoroa kesken juhlan, vaan juhlavieraiden puheenvuorot jätetään vapaaseen sanaan. Vapaan sanan puheenvuoroja voit käydä pyytämässä taukojen aikana juhlamarsalkalta. Laulutoiveita voit puolestaan käydä esittämässä taukojen aikana laulunjohtajille. Laulu lähtee aina hiljaisuudesta ja lauluihin ei ole suotavaa laulaa lauluvihkosta ulkopuolisia säkeistöjä.
+                            
+Taukojen aikana juhlakansa voi vapaasti nousta pöydästä. Muuten pöydästä poistumiseen on kohteliasta kysyä lupa lähimmältä pöytäseurueelta, minkä jälkeen voi huomaamatta poistua juhlasalista. Tarpeetonta liikennettä ei kuitenkaan pitäisi tapahtua laulujen tai ohjelmanumeroiden aikana.
+                            
+Myös vuosijuhlassa jokaisen laulun jälkeen kohotetaan malja. Skoolattaessa laseja ei kilistellä yhteen. Skoolaustoveria on kohteliasta katsoa silmiin skoolauksen aikana. Ensin skoolataan viistosti istuvan kanssa aloittaen oikealle, tämän jälkeen viistosti vasempaan ja lopuksi edessä istuvan kanssa. Tyhjällä lasilla ei tule skoolata.
                         </p>
                         {:else}
-                        <h3>Information</h3>
+                        <h3>Manners</h3>
                         <p>
                             The annual ball is a prestigious event, and you are expected to follow proper manners. Toastmaster’s and song master’s speeches should be followed quietly and attentively. However, outside the official program socializing with your tableside company is encouraged throughout the event. Guest speeches are saved for the dedicated slot in the official program and you may request permission from the toastmaster during scheduled breaks. Songs can also be requested from the song master during breaks only. Songs always start from silence and lyrics follow given songbooks; no extra verses are sung during the main event. 
 
