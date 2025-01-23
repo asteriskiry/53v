@@ -21,6 +21,20 @@
                 <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
                 <a href="#registered">{fi ? 'Ilmonneet' : 'Registered'}</a>
             </div>
+            <div class="flex-item twelve">
+                {#if fi}
+                <p>
+                    Juhlien illalliskortin hinta on 105€, Asteriski ry:n jäsenille 100€. Illalliskortti sisältää cocktailtilaisuuden, pääjuhlan, sekä päätä huimaavat jatkot. 
+                    <br><br>
+                    Juhlinta ei suinkaan lopu jatkoihin, vaan lauantaina on mahdollista osallistua silliaamiaisella, jonka hinta on 15€.
+                </p>
+                {:else}
+                <p>
+                    The price of the dinner card is 105€, for Asteriski members 100€. The dinner card includes cocktail party, the main event, and head-turning after party.                     <br><br>
+                    The party doesn't end there. On Saturday you can join in with a herring breakfast for 15€.
+                </p>
+                {/if}
+            </div>
             <div class="flex-item six">
                 <label>
                     <span>{fi ? 'Etunimi' : 'First name'}*</span>
