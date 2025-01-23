@@ -4,39 +4,55 @@
     import reaktor from "$lib/assets/reaktor.svg";
     import oikia from "$lib/assets/oikia.png";
     import kaalimato from "$lib/assets/kaalimato.webp";
+    import ssk from "$lib/assets/ssk.png";
     export let id = 'sponsors';
     export let lang = 'fi';
+
+    export let logos = [
+        {
+            src: mankeli,
+            href: 'https://www.mankelisolutions.fi/',
+            alt: 'Mankeli Solutions logo'
+        },
+        {
+            src: visma,
+            href: 'https://www.visma.fi/',
+            alt: 'Visma logo'
+        },
+        {
+            src: reaktor,
+            href: 'https://www.reaktor.com/',
+            alt: 'Reaktor logo'
+        },
+        {
+            src: oikia,
+            href: 'https://www.oikiaruoka.fi/',
+            alt: 'Oikia logo'
+        },
+        {
+            src: kaalimato,
+            href: 'https://www.kaalimato.com/',
+            alt: 'Kaalimato logo'
+        },
+        {
+            src: ssk,
+            href: 'https://sillikonttori.fi/',
+            alt: 'Suomen sillikonttori logo'
+        },
+    ]
 </script>
 
 <section id="{id}" class="sponsors">
     <div class="wrap">
         <h2>{lang === 'fi' ? 'Sponsorit' : 'Sponsors'}</h2>
         <div class="flex">
+        {#each logos as logo}
             <div class="flex-item four">
-                <a rel="noreferrer" href="https://www.mankelisolutions.fi/" target="_blank">
-                    <img class="img" src="{mankeli}" alt="Mankeli Solutions logo">
+                <a rel="noreferrer" href="{logo.href}" target="_blank">
+                    <img loading="lazy" class="img" src="{logo.src}" alt="{logo.alt}">
                 </a>
             </div>
-            <div class="flex-item four">
-                <a rel="noreferrer" href="https://www.visma.fi/" target="_blank">
-                    <img class="img" src="{visma}" alt="Visma logo">
-                </a>
-            </div>
-            <div class="flex-item four">
-                <a rel="noreferrer" href="https://www.reaktor.com/" target="_blank">
-                    <img class="img" src="{reaktor}" alt="Reaktor logo">
-                </a>
-            </div>
-            <div class="flex-item four">
-                <a rel="noreferrer" href="https://www.oikiaruoka.fi/" target="_blank">
-                    <img class="img" src="{oikia}" alt="Oikia logo">
-                </a>
-            </div>
-            <div class="flex-item four">
-                <a rel="noreferrer" href="https://www.kaalimato.com/" target="_blank">
-                    <img class="img" src="{kaalimato}" alt="Kaalimato logo">
-                </a>
-            </div>
+        {/each}
         </div>
     </div>
 </section>
@@ -52,8 +68,8 @@
         justify-content: center;
     }
     a {
-        padding: 1rem;
-        height: 120px;
+        padding: 5px 10px;
+        height: 140px;
         display: flex;
         img {
             object-fit: contain;
