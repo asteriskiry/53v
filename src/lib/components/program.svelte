@@ -2,6 +2,7 @@
     import logo from "$lib/assets/asteriskilogo.png";
     import reaktor from "$lib/assets/reaktor.svg";
     import mankeli from "$lib/assets/mankeli_solutions.svg";
+    import tmk  from "$lib/assets/TMK_logo.jpg";
     export let lang = 'fi';
     export let id = 'program';
     export let title = {
@@ -78,6 +79,9 @@
                 ],
                 right: 'Herring Breakfast sponsor:'
             },
+            imgs: [
+                {href:'https://www.mittausjakalibrointipalvelu.fi/', src: tmk, alt: 'TMK logo'}
+            ]
         },
     ];
 </script>

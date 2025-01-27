@@ -2,6 +2,7 @@
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     import visma from "$lib/assets/visma.svg";
     import reaktor from "$lib/assets/reaktor.svg";
+    import tmk  from "$lib/assets/TMK.png";
     import oikia from "$lib/assets/oikia.png";
     import kaalimato from "$lib/assets/kaalimato.webp";
     import ssk from "$lib/assets/SSK.png";
@@ -23,6 +24,11 @@
             src: reaktor,
             href: 'https://www.reaktor.com/',
             alt: 'Reaktor logo'
+        },
+        {
+            src: tmk,
+            href: 'https://www.mittausjakalibrointipalvelu.fi/',
+            alt: 'TMK logo'
         },
         {
             src: oikia,
