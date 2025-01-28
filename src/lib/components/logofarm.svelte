@@ -7,6 +7,7 @@
     import kaalimato from "$lib/assets/kaalimato.webp";
     import ssk from "$lib/assets/SSK.png";
     import lygas from "$lib/assets/lygas.png";
+    import tek from "$lib/assets/TEK.png";
     export let id = 'sponsors';
     export let lang = 'fi';
 
@@ -30,6 +31,11 @@
             src: tmk,
             href: 'https://www.mittausjakalibrointipalvelu.fi/',
             alt: 'TMK logo'
+        },
+        {
+            src: tek,
+            href: 'https://www.tek.fi/',
+            alt: 'Tekniikan akateemiset TEK logo'
         },
         {
             src: lygas,
