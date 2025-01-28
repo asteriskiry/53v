@@ -6,6 +6,7 @@
     import oikia from "$lib/assets/oikia.png";
     import kaalimato from "$lib/assets/kaalimato.webp";
     import ssk from "$lib/assets/SSK.png";
+    import lygas from "$lib/assets/lygas.png";
     export let id = 'sponsors';
     export let lang = 'fi';
 
@@ -29,6 +30,11 @@
             src: tmk,
             href: 'https://www.mittausjakalibrointipalvelu.fi/',
             alt: 'TMK logo'
+        },
+        {
+            src: lygas,
+            href: 'https://clubmarilyn.fi/',
+            alt: 'Club Marilyn ja Vegas logo'
         },
         {
             src: oikia,

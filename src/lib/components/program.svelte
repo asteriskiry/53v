@@ -1,5 +1,4 @@
 <script>
-    import logo from "$lib/assets/asteriskilogo.png";
     import reaktor from "$lib/assets/reaktor.svg";
     import mankeli from "$lib/assets/mankeli_solutions.svg";
     import tmk  from "$lib/assets/TMK_logo.jpg";
