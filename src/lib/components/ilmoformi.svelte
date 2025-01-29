@@ -28,10 +28,16 @@
                     <br><br>
                     Juhlinta ei suinkaan lopu jatkoihin, vaan lauantaina on mahdollista osallistua silliaamiaisella, jonka hinta on 15€.
                 </p>
+                <p>
+                    Ilmoittautuminen päättyy <b>16.2. klo 23.59.</b>
+                </p>
                 {:else}
                 <p>
                     The price of the dinner card is 105€, for Asteriski members 100€. The dinner card includes the main event and head-turning after party.                     <br><br>
                     The party doesn't end there. On Saturday you can join in with a herring breakfast for 15€.
+                </p>
+                <p>
+                    Registration ends on <b>16.2. at 23.59.</b>
                 </p>
                 {/if}
             </div>
