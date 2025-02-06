@@ -11,6 +11,7 @@
     import Etiquette from "$lib/components/etiquette.svelte";
     import infoImg from "$lib/assets/vuju.jpg"
     import reaktor from "$lib/assets/reaktor.svg";
+    import tmk  from "$lib/assets/TMK_logo.jpg";
     export let data;
 
     let sponsorIntroduction = [
@@ -32,6 +33,25 @@
                 {href:'https://www.reaktor.com/', src: reaktor, alt: 'Reaktor logo'}
             ]
         },
+        {
+            fi: {
+                left: [
+                    'TMK Teollisuuden Mittaus- ja Kalibrointipalvelu Oy', 
+                    "Ydinpalveluitamme ovat teollisuuden mittauspalvelut. Sen ohella tarjoamme kalibrointipalveluita, jota teemme vuosikymmenten kokemuksella yrityksille sekä julkisen puolen tarpeisiin. Pääasiassa palvelemme Suomessa, Pohjoismaissa ja Baltian alueilla. Tarvittaessa myös koko planeettamme alueella. Ammattitaidon ja koulutuksen ohella vuosien aikana kartutettu hiljainen tietotaito on alallamme merkittävässä asemassa, ja meiltä sitä löytyy; asiakaskuntaamme kuuluvatkin kaikenkokoiset asiakkaat aina pienistä konepajoista niin tehtaisiin, ydinvoimaloihin kuin ilmailu- ja avaruustekniikkaa tuottaviin teollisuuden ammattilaisiinkin asti. \n\n Tärkeimpiä perusperiaatteitamme on, että toimimme aina ns. kolmannen osapuolen asiantuntijana, täysin puolueettomasti ja riippumattomasti. Voit siis todella luottaa raportoimiimme mittaustuloksiin, ja laatia sekä toteuttaa tarvittavat toimenpiteet meiltä saatujen mittaustulosten perusteella. Olemme alan kokeneimpia toimijoita, joilta teollisuuden mittauspalvelu sujuu aina luotettavasti, tarkasti ja ammattitaidolla. Joustavuus on eräs ominaisuuksistamme, jota asiakkaat osaavat arvostaa!"
+                ],
+                right: '',
+                tmk: true
+            },
+            en: {
+                left: [
+                    'Sponsor introduction',
+                ],
+                right: ''
+            },
+            imgs: [
+                {href:'https://www.mittausjakalibrointipalvelu.fi/', src: tmk, alt: 'TMK logo'}
+            ]
+        },
     ];
 </script>
 <Banner/>
@@ -42,6 +62,6 @@
 <Etiquette/>
 <Offers/>
 <Sillis/>
-<Program title={{fi: 'Yritysesittely'}} texts={sponsorIntroduction} id={'sponsor-introduction'} />
+<Program title={{fi: 'Yritysesittelyt'}} texts={sponsorIntroduction} id={'sponsor-introduction'} />
 <Logofarm />
 <Footer/>

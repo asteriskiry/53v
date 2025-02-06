@@ -98,6 +98,29 @@
                     <p>
                         {lang === 'fi' ? text.fi.left[1] : text.en.left[1]}
                     </p>
+                    {#if lang === 'fi' && text.fi?.tmk === true}
+                    <p>
+                        <b>Tarjoamamme mittauspalvelu pähkinänkuoressa</b>
+
+Suoritamme parhaalla ja tarkoituksenmukaisimmalla, saatavissa olevalla mittauskalustolla ja ohjelmistoilla <b>3D-mittauksia, linjauksia ja tilavuusmittauksia</b>, kuten erilaisten koneistettujen kappaleiden <b>mittatarkastuksia, säiliöiden tilavuuskalibrointeja ja geometrisia määrityksiä, pyörivien laitteiden ja kappaleiden tarkastuksia</b> (mm. rumpuja, pulppereita, uuneja jne.) sekä <b>teräsrakenteiden tarkastuksia ja -asennuksia.</b> Lisäksi <b>vesivoimalat</b> ovat yksi merkittävä palveluidemme käyttäjä.
+
+Toimimme koko Suomen alueella, Pohjoismaissa ja Baltian alueella tarjoten mittauspalvelut moninaiselle joukolle asiakkaita aina pienistä konepajoista avaruustekniikan tuottajiin. Tarvittaessa kauttamme saat myös asennus-, säätöja korjauspalvelun laitteillenne (mm. pyörivien uunien ja rumpujen säätö- ja korjauspalvelu, on-sitekoneistuspalvelut).
+                    </p>
+                    <ul>
+                        <li>Turbiinien ja generaattorien linjaukset</li>
+                        <li>Turbiinipetien on-site-koneistusmittaukset</li>
+                        <li>Koneistetut kappaleet</li>
+                        <li>Hitsatut teräsrakenteet</li>
+                        <li>Pyörivät myllyt, rummut ja uunit (tarkastus, säätö ja korjaus)</li>
+                        <li>Säiliöiden tilavuus- ja geometriamittaukset (mm. pystyasentoiset lieriösäiliöt, makaavat
+                            "sikari" säiliöt, pallosäiliöt) ja laskennat</li>
+                        <li>Koneiden- ja laitteiden asennus- ja tarkastusmittaukset</li>
+                        <li>Ilmailu-, avaruus- ja ajoneuvoteollisuuden jigien ja tuotteiden tarkastus- ja asennusmittaukset</li>
+                        <li>Asennusvalvontaa</li>
+                        <li>Kohteiden 3D-skannaukset</li>
+                        <li>Vesivoimalaitteiden tarkastus- ja asennusmittaukset.</li>
+                    </ul>
+                    {/if}
                 </div>
                 {#if text.imgs}
                 <div class="flex-item four has-sponsors">
