@@ -13,7 +13,7 @@
             fi: {
                 left: [
                     'Cocktail-tilaisuus', 
-                    'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Akatemiatalolla Konsistorin salissa (Rothoviuksenkatu 1, 20500 Turku) kello 16.00 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja, cocktailpalat sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Cocktail-tilaisuudesta kuljetukset alakertaan tulee järjestää itse.'
+                    'Pääjuhlaa edeltää cocktail-tilaisuus, joka pidetään Akatemiatalolla Konsistorin salissa (Rothoviuksenkatu 1, 20500 Turku) kello 16.00 alkaen. Cocktail-tilaisuuden ohjelmaan kuuluu tervetuliaismalja sekä kutsuvieraiden esittämät tervehdykset Asteriskille. Cocktail-tilaisuudesta kuljetukset alakertaan tulee järjestää itse.'
                 ],
                 right: 'Cocktail-tilaisuudessa mukana:'
             },

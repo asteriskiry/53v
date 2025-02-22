@@ -14,7 +14,7 @@
 <div class="wrap">
     <div class="flex-items bordered flower-bg">
         <h2>{fi ? 'Ilmoittautuminen' : 'Sign up'}</h2>
-    {#if invited || (new Date().getTime() > new Date('2025-01-28'))}
+    {#if false}
         {#if form?.success !== true}
         <form method="POST" class="{form?.fields === true ? 'error' : ''}" use:enhance>
             <div class="flex-item twelve row">
@@ -214,7 +214,7 @@
         {/if}
     {:else}
         <div class="flex-item six thanks">
-            <p>{fi ? 'Ilmoittautuminen aukeaa 28.1.' : 'Sign up starts 28.1.'} </p>
+            <p>{fi ? 'Ilmoittautuminen on päättynyt' : 'Sign up has ended'} </p>
             <a href=".">{fi ? 'Etusivulle' : 'To frontpage'}</a>
         </div>
     {/if}
