@@ -67,7 +67,7 @@
             fi: {
                 left: [
                     'Sillis',
-                    'Meininki ei suinkaan lopu pääjuhlan ja jatkojen jälkeen, vaan lauantaina 8.3. koittaa taikametsäteemainen silliaamiainen! Silliksellä on tarjolla ruokaa, naposteltavaa sekä juomista. Kaiken tämän lisäksi sauna (ja palju) on kuumana, joten nappaa mukaasi myös uimapuku, pyyhe ja peseytymisvermeet. Huom. uimapuku on sauna- ja pesutiloissa pakollinen! Sillikselle voit pukeutua halutessasi teeman mukaan tai rentoihin vaatteisiin, esimerkiksi haalareihin. \n\nSillikselle on yhteiskuljetukset. Bussit lähtevät lauantaina 8.3. klo 12.00 ja 12.45. Proffan kellarin edestä. Olethan ajoissa paikalla, sillä bussit eivät odota! Kuljetukset takaisin sillikseltä Proffaan ovat perillä noin klo 19.45 ja 20.30.'
+                    'Meininki ei suinkaan lopu pääjuhlan ja jatkojen jälkeen, vaan lauantaina 8.3. koittaa taikametsäteemainen silliaamiainen! Silliksellä on tarjolla ruokaa, naposteltavaa sekä juomista. Kaiken tämän lisäksi sauna (ja palju) on kuumana, joten nappaa mukaasi myös uimapuku, pyyhe ja peseytymisvermeet. Huom. uimapuku on sauna- ja pesutiloissa pakollinen! Sillikselle voit pukeutua halutessasi teeman mukaan tai rentoihin vaatteisiin, esimerkiksi haalareihin. \n\nSillikselle on yhteiskuljetukset. Bussit lähtevät lauantaina 8.3. klo 12.00 ja 12.45. Proffan kellarin edestä. Olethan ajoissa paikalla, sillä bussit eivät odota! Kuljetukset takaisin sillikseltä Proffaan ovat perillä noin klo 17.45 ja 18.30.'
                 ],
                 right: 'Silliksellä mukana:'
             },
